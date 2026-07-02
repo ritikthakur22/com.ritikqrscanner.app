@@ -27,6 +27,14 @@ A fast, modern, and completely ad-free QR Scanner and Barcode Reader built nativ
 | :---: | :---: | :---: | :---: |
 | <img src="screenshots/1.png" width="200" alt="Scanner Dark"> | <img src="screenshots/2.png" width="200" alt="Result Dark"> | <img src="screenshots/3.png" width="200" alt="History Dark"> | <img src="screenshots/4.png" width="200" alt="Settings Dark"> |
 
+## 💻 Tech Stack
+- **Language**: Kotlin
+- **UI Framework**: Jetpack Compose & Material Design 3
+- **Database**: Room (SQLite) & Jetpack DataStore (Preferences)
+- **Architecture**: MVVM, Compose Navigation
+- **Image Loading**: Coil
+- **QR Core Engine**: ZXing (Zebra Crossing)
+
 ## 🛠️ How to Build from Source
 Anyone can clone and build this application locally using Android Studio.
 
