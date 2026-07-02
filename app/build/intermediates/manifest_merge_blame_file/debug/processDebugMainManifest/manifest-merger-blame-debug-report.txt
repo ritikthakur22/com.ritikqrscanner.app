@@ -1,0 +1,210 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ritikqrscanner.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-feature android:name="android.hardware.camera" />
+11-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:4:5-60
+11-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:4:19-57
+12    <uses-feature android:name="android.hardware.camera.autofocus" />
+12-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:5:5-70
+12-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:5:19-67
+13
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:6:5-65
+14-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:6:22-62
+15    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+15-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:7:5-76
+15-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:7:22-73
+16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+16-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:8:5-76
+16-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:8:22-73
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:9:5-79
+17-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:9:22-76
+18    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+18-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:10:5-79
+18-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:10:22-76
+19
+20    <permission
+20-->[androidx.core:core:1.12.0] /home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+21        android:name="com.ritikqrscanner.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.12.0] /home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.12.0] /home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.ritikqrscanner.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.12.0] /home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.12.0] /home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+25
+26    <uses-feature
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+27        android:name="android.hardware.camera.front"
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+28        android:required="false" />
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+29    <uses-feature
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+30        android:name="android.hardware.camera.flash"
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+31        android:required="false" />
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+32    <uses-feature
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+33        android:name="android.hardware.screen.landscape"
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+34        android:required="false" />
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+35    <uses-feature
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+36        android:name="android.hardware.wifi"
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+37        android:required="false" /> <!-- Required on older devices for wifi -->
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+38    <application
+38-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:12:5-29:19
+39        android:allowBackup="true"
+39-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:13:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.12.0] /home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:icon="@mipmap/ic_launcher"
+43-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:14:9-43
+44        android:label="QR Scanner &amp; Reader [No ADs]"
+44-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:15:9-57
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:16:9-54
+46        android:supportsRtl="true"
+46-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:17:9-35
+47        android:theme="@style/Theme.ModernQRApp" >
+47-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:18:9-49
+48        <activity
+48-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:20:9-28:20
+49            android:name="com.modernqr.app.MainActivity"
+49-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:21:13-57
+50            android:exported="true"
+50-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:22:13-36
+51            android:theme="@style/Theme.ModernQRApp" >
+51-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:23:13-53
+52            <intent-filter>
+52-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:24:13-27:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:25:17-69
+53-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:25:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:26:17-77
+55-->/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:26:27-74
+56            </intent-filter>
+57        </activity>
+58        <activity
+58-->[androidx.compose.ui:ui-test-manifest:1.6.0] /home/crdy/.gradle/caches/transforms-3/7b88025045801d4a36dae338812da3e0/transformed/ui-test-manifest-1.6.0/AndroidManifest.xml:23:9-25:39
+59            android:name="androidx.activity.ComponentActivity"
+59-->[androidx.compose.ui:ui-test-manifest:1.6.0] /home/crdy/.gradle/caches/transforms-3/7b88025045801d4a36dae338812da3e0/transformed/ui-test-manifest-1.6.0/AndroidManifest.xml:24:13-63
+60            android:exported="true" />
+60-->[androidx.compose.ui:ui-test-manifest:1.6.0] /home/crdy/.gradle/caches/transforms-3/7b88025045801d4a36dae338812da3e0/transformed/ui-test-manifest-1.6.0/AndroidManifest.xml:25:13-36
+61        <activity
+61-->[androidx.compose.ui:ui-tooling-android:1.6.0] /home/crdy/.gradle/caches/transforms-3/855f963dd0a84b94ce6315277523fb27/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+62            android:name="androidx.compose.ui.tooling.PreviewActivity"
+62-->[androidx.compose.ui:ui-tooling-android:1.6.0] /home/crdy/.gradle/caches/transforms-3/855f963dd0a84b94ce6315277523fb27/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+63            android:exported="true" />
+63-->[androidx.compose.ui:ui-tooling-android:1.6.0] /home/crdy/.gradle/caches/transforms-3/855f963dd0a84b94ce6315277523fb27/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+64
+65        <provider
+65-->[androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+66            android:name="androidx.startup.InitializationProvider"
+66-->[androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+67            android:authorities="com.ritikqrscanner.app.androidx-startup"
+67-->[androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+68            android:exported="false" >
+68-->[androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+69            <meta-data
+69-->[androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+70-->[androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+71                android:value="androidx.startup" />
+71-->[androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+72            <meta-data
+72-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/crdy/.gradle/caches/transforms-3/555bf2e80b2899dae17caa4222ddf1a8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+73                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/crdy/.gradle/caches/transforms-3/555bf2e80b2899dae17caa4222ddf1a8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+74                android:value="androidx.startup" />
+74-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/crdy/.gradle/caches/transforms-3/555bf2e80b2899dae17caa4222ddf1a8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+75            <meta-data
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+76                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+77                android:value="androidx.startup" />
+77-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+78        </provider>
+79
+80        <service
+80-->[androidx.room:room-runtime:2.6.1] /home/crdy/.gradle/caches/transforms-3/775e64224d6b01ddb3f504a883471d5d/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+81            android:name="androidx.room.MultiInstanceInvalidationService"
+81-->[androidx.room:room-runtime:2.6.1] /home/crdy/.gradle/caches/transforms-3/775e64224d6b01ddb3f504a883471d5d/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+82            android:directBootAware="true"
+82-->[androidx.room:room-runtime:2.6.1] /home/crdy/.gradle/caches/transforms-3/775e64224d6b01ddb3f504a883471d5d/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+83            android:exported="false" />
+83-->[androidx.room:room-runtime:2.6.1] /home/crdy/.gradle/caches/transforms-3/775e64224d6b01ddb3f504a883471d5d/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+84
+85        <receiver
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+86            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+87            android:directBootAware="false"
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+88            android:enabled="true"
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+89            android:exported="true"
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+90            android:permission="android.permission.DUMP" >
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+92                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+93            </intent-filter>
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+95                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+96            </intent-filter>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+98                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+101                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/crdy/.gradle/caches/transforms-3/5ec7a53eca0962cbddc0f1177195942c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+102            </intent-filter>
+103        </receiver>
+104
+105        <activity
+105-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+106            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+106-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+107            android:clearTaskOnLaunch="true"
+107-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+108            android:screenOrientation="sensorLandscape"
+108-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+109            android:stateNotNeeded="true"
+109-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+110            android:theme="@style/zxing_CaptureTheme"
+110-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+111            android:windowSoftInputMode="stateAlwaysHidden" />
+111-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+112    </application>
+113
+114</manifest>

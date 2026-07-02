@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ritikqrscanner.app-debug-59:/drawable_flashlight_on_24.xml.flat",
+        "source": "com.ritikqrscanner.app-main-61:/drawable/flashlight_on_24.xml"
+    },
+    {
+        "merged": "com.ritikqrscanner.app-debug-59:/drawable_flashlight_off_24.xml.flat",
+        "source": "com.ritikqrscanner.app-main-61:/drawable/flashlight_off_24.xml"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-debug-59:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/crdy/.gradle/daemon/8.4/com.ritikqrscanner.app-main-61:/mipmap-xhdpi/ic_launcher.png"
+    }
+]

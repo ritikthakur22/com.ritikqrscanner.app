@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ritikqrscanner.app-mergeReleaseResources-53:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

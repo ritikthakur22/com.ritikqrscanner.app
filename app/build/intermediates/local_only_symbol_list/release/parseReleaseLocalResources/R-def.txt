@@ -1,0 +1,7 @@
+R_DEF: Internal format may change without notice
+local
+drawable flashlight_off_24
+drawable flashlight_on_24
+mipmap ic_launcher
+mipmap ic_launcher_round
+style Theme.ModernQRApp
