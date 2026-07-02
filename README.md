@@ -17,11 +17,15 @@ A fast, modern, and completely ad-free QR Scanner and Barcode Reader built nativ
 
 ## 📸 Screenshots
 
-| Light Theme | Dark Theme |
-| :---: | :---: |
-| <img src="screenshots/light_theme.jpg" width="300" alt="Light Theme"> | <img src="screenshots/dark_theme.jpg" width="300" alt="Dark Theme"> |
+### Light Theme
+| Scanner | Result | History | Settings |
+| :---: | :---: | :---: | :---: |
+| <img src="screenshots/1 white theme.png" width="200" alt="Scanner Light"> | <img src="screenshots/2 white theme.png" width="200" alt="Result Light"> | <img src="screenshots/3 white theme.png" width="200" alt="History Light"> | <img src="screenshots/4 white theme.png" width="200" alt="Settings Light"> |
 
-*(Note: Add your screenshot files named `light_theme.jpg` and `dark_theme.jpg` to the `/screenshots` directory)*
+### Dark Theme
+| Scanner | Result | History | Settings |
+| :---: | :---: | :---: | :---: |
+| <img src="screenshots/1.png" width="200" alt="Scanner Dark"> | <img src="screenshots/2.png" width="200" alt="Result Dark"> | <img src="screenshots/3.png" width="200" alt="History Dark"> | <img src="screenshots/4.png" width="200" alt="Settings Dark"> |
 
 ## 🛠️ How to Build from Source
 Anyone can clone and build this application locally using Android Studio.
