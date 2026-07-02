@@ -1,0 +1,39 @@
+# Gradle & Build Cache
+.gradle/
+build/
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+
+# Local configuration & Keystores (DO NOT COMMIT)
+local.properties
+keystore.properties
+app/release.keystore
+*.keystore
+*.jks
+
+# IDE & Editor files
+*.iml
+.idea/
+.DS_Store
+
+# Fastlane credentials & reports
+play-store-key.json
+fastlane/report.xml
+fastlane/Preview.html
+
+# Marketing Assets (Loose root images)
+App-logo-new.png
+feature_graphic.png
+play_store_icon.png
+
+# Scripts & temporary files
+*.py
+*.pyc
+*.pyo
+__pycache__/
+
+# Markdown & Documentation: ignore all markdown notes except README.md
+*.md
+!README.md
