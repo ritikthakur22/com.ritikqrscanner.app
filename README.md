@@ -4,6 +4,8 @@ A fast, modern, and completely ad-free QR Scanner and Barcode Reader built nativ
 
 ## 🌟 Features
 - **Lightning Fast Scanning**: Instantly decode standard QR codes, barcodes, and URLs.
+- **QR Code Generator**: Create custom QR codes for Text, URLs, Wi-Fi, Locations, Contacts (vCard), Email, Phone, SMS, and a powerful "All-in-One" format.
+- **Download & Share**: Save generated QR codes directly to your device's Downloads folder for easy sharing.
 - **Modern UI/UX**: Clean, minimalist design using Jetpack Compose with beautiful dynamic Light and Dark mode themes.
 - **Smart Actions**: 
   - Automatically detect and connect to Wi-Fi networks from QR codes (supports Android 10+ and legacy APIs).
@@ -11,7 +13,7 @@ A fast, modern, and completely ad-free QR Scanner and Barcode Reader built nativ
   - Smart copy-to-clipboard functionality.
 - **Upload from Gallery**: Scan QR codes from images saved on your device.
 - **Torch Control**: Easily toggle the camera flashlight for scanning in low-light environments.
-- **History Management**: Automatically save scanned items. Pin important codes to the top, or selectively delete history items.
+- **History Management**: Automatically save scanned items. Pin important codes to the top, or selectively delete history items with confirmation prompts.
 - **No Ads, No Trackers**: 100% privacy-focused.
 - **Fully Offline**: Does not require an internet connection to scan and decode.
 
@@ -41,7 +43,7 @@ Anyone can clone and build this application locally using Android Studio.
 ### Prerequisites
 - **Android Studio** (Jellyfish or newer recommended)
 - **JDK 17** or newer
-- **Android SDK** API level 34
+- **Android SDK** API level 36 (Android 16)
 
 ### Build Instructions
 1. **Clone the repository**:
@@ -79,6 +81,7 @@ To provide its functionality, the app requires the following permissions:
 - `android.permission.INTERNET`: Used only for opening scanned URLs in the external browser.
 - `android.permission.ACCESS_WIFI_STATE` & `CHANGE_WIFI_STATE`: Required to automatically connect to scanned Wi-Fi networks.
 - `android.permission.ACCESS_FINE_LOCATION`: Required by Android system for Wi-Fi connection capabilities on certain API levels.
+- `android.permission.WRITE_EXTERNAL_STORAGE`: Required to save generated QR codes to the device's storage on older Android versions (API 28 and below).
 
 ## 👨‍💻 Developer Details
 - **Developer**: Ritik Thakur
