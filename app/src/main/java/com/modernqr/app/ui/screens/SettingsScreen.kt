@@ -20,7 +20,6 @@ fun SettingsScreen() {
     val coroutineScope = rememberCoroutineScope()
     
     val themeMode by settingsManager.themeModeFlow.collectAsState(initial = 2)
-    val autoScan by settingsManager.autoScanFlow.collectAsState(initial = false)
 
     Column(modifier = Modifier.fillMaxSize()) {
         Surface(
@@ -36,38 +35,6 @@ fun SettingsScreen() {
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        // Auto Scan Toggle
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .toggleable(
-                    value = autoScan,
-                    role = Role.Switch,
-                    onValueChange = {
-                        coroutineScope.launch {
-                            settingsManager.setAutoScan(it)
-                        }
-                    }
-                )
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text("Auto-scan on startup", style = MaterialTheme.typography.titleMedium)
-                Text(
-                    "Automatically open camera when the app starts",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            Switch(
-                checked = autoScan,
-                onCheckedChange = null
-            )
-        }
-
-        Divider(modifier = Modifier.padding(horizontal = 16.dp))
 
         // Theme Selection
         Column(modifier = Modifier.padding(16.dp)) {
