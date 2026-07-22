@@ -11,6 +11,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -22,6 +25,7 @@ import java.util.*
 @Composable
 fun HistoryScreen(viewModel: MainViewModel = viewModel()) {
     val historyItems by viewModel.history.collectAsState()
+    var showClearHistoryDialog by remember { mutableStateOf(false) }
 
     Column(modifier = Modifier.fillMaxSize()) {
         Surface(
@@ -41,7 +45,7 @@ fun HistoryScreen(viewModel: MainViewModel = viewModel()) {
                     style = MaterialTheme.typography.headlineMedium
                 )
                 if (historyItems.isNotEmpty()) {
-                    IconButton(onClick = { viewModel.clearHistory() }) {
+                    IconButton(onClick = { showClearHistoryDialog = true }) {
                         Icon(Icons.Default.Delete, contentDescription = "Clear History")
                     }
                 }
@@ -114,6 +118,27 @@ fun HistoryScreen(viewModel: MainViewModel = viewModel()) {
                 }
             }
         }
+    }
+
+    if (showClearHistoryDialog) {
+        AlertDialog(
+            onDismissRequest = { showClearHistoryDialog = false },
+            title = { Text("Clear History") },
+            text = { Text("Are you sure you want to clear all history? This action cannot be undone.") },
+            confirmButton = {
+                TextButton(onClick = {
+                    viewModel.clearHistory()
+                    showClearHistoryDialog = false
+                }) {
+                    Text("Clear")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showClearHistoryDialog = false }) {
+                    Text("Cancel")
+                }
+            }
+        )
     }
 }
 
