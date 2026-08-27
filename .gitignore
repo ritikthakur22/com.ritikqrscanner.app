@@ -17,3 +17,9 @@ keystore.properties
 app/release.keystore
 *.jks
 *.keystore
+
+# Marketing Assets
+App-logo-new.png
+feature_graphic.png
+play_store_icon.png
+screenshots/
