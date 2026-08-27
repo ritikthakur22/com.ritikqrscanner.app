@@ -112,7 +112,7 @@ fun SettingsScreen() {
             androidx.compose.foundation.text.ClickableText(
                 text = androidx.compose.ui.text.AnnotatedString("Privacy Policy"),
                 style = MaterialTheme.typography.bodyMedium.copy(color = MaterialTheme.colorScheme.primary),
-                onClick = { uriHandler.openUri("https://docs.google.com/document/d/1lsuML4n8tc4_V2ltfkkAxb57SFENPnabYSzk9h829mc/edit?usp=sharing") }
+                onClick = { uriHandler.openUri("https://docs.google.com/document/d/1KkKbtngJ4Nq-I-uX4OAik2w3YD889olWSKZ1AYuTixE/edit?usp=sharing") }
             )
         }
         
