@@ -1,0 +1,4 @@
+#Thu Aug 27 09:37:15 NPT 2026
+base.0=/home/crdy/testing/app/com.ritikqrscanner.app/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

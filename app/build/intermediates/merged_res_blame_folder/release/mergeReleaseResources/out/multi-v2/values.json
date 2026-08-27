@@ -74,23 +74,6 @@
                     }
                 },
                 {
-                    "source": "/home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "88",
-                        "endOffsets": "139"
-                    },
-                    "to": {
-                        "startLines": "243",
-                        "startColumns": "4",
-                        "startOffsets": "15693",
-                        "endColumns": "87",
-                        "endOffsets": "15776"
-                    }
-                },
-                {
                     "source": "/home/crdy/.gradle/caches/transforms-3/2c95facec3030d0d2f59303ccd1f3f47/transformed/foundation-release/res/values/values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -175,6 +158,23 @@
                         "startOffsets": "5415,6359",
                         "endColumns": "41,59",
                         "endOffsets": "5452,6414"
+                    }
+                },
+                {
+                    "source": "/home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "88",
+                        "endOffsets": "139"
+                    },
+                    "to": {
+                        "startLines": "243",
+                        "startColumns": "4",
+                        "startOffsets": "15693",
+                        "endColumns": "87",
+                        "endOffsets": "15776"
                     }
                 },
                 {

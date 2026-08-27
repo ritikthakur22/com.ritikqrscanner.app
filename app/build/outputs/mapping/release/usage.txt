@@ -1388,6 +1388,8 @@ androidx.compose.animation.TransitionKt$animateColor$1
 androidx.compose.animation.TransitionKt
 androidx.compose.animation.core.ActualJvm_jvmKt
 androidx.compose.animation.core.Animatable:
+    private java.lang.Object lowerBound
+    private java.lang.Object upperBound
     public synthetic void <init>(java.lang.Object,androidx.compose.animation.core.TwoWayConverter,java.lang.Object)
     public synthetic void <init>(java.lang.Object,androidx.compose.animation.core.TwoWayConverter,java.lang.Object,int,kotlin.jvm.internal.DefaultConstructorMarker)
     public static final synthetic java.lang.Object access$runAnimation(androidx.compose.animation.core.Animatable,androidx.compose.animation.core.Animation,java.lang.Object,kotlin.jvm.functions.Function1,kotlin.coroutines.Continuation)
@@ -1399,6 +1401,8 @@ androidx.compose.animation.core.Animatable:
     private static synthetic void getNegativeInfinityBounds$annotations()
     private static synthetic void getPositiveInfinityBounds$annotations()
     public final java.lang.Object getUpperBound()
+    public final void updateBounds(java.lang.Object,java.lang.Object)
+    public static synthetic void updateBounds$default(androidx.compose.animation.core.Animatable,java.lang.Object,java.lang.Object,int,java.lang.Object)
 androidx.compose.animation.core.AnimateAsStateKt:
     public static final synthetic androidx.compose.runtime.State animateDpAsState-Kz89ssw(float,androidx.compose.animation.core.AnimationSpec,kotlin.jvm.functions.Function1,androidx.compose.runtime.Composer,int,int)
     public static final synthetic androidx.compose.runtime.State animateFloatAsState(float,androidx.compose.animation.core.AnimationSpec,float,kotlin.jvm.functions.Function1,androidx.compose.runtime.Composer,int,int)
@@ -2396,7 +2400,6 @@ androidx.compose.foundation.layout.Arrangement:
     private final void forEachIndexed(int[],boolean,kotlin.jvm.functions.Function2)
     public static synthetic void getBottom$annotations()
     public static synthetic void getCenter$annotations()
-    public final androidx.compose.foundation.layout.Arrangement$Horizontal getEnd()
     public static synthetic void getEnd$annotations()
     public final androidx.compose.foundation.layout.Arrangement$HorizontalOrVertical getSpaceAround()
     public static synthetic void getSpaceAround$annotations()
@@ -2442,12 +2445,10 @@ androidx.compose.foundation.layout.ColumnKt:
     public static synthetic void getDefaultColumnMeasurePolicy$annotations()
 androidx.compose.foundation.layout.ColumnScope$DefaultImpls
 androidx.compose.foundation.layout.ColumnScope:
-    public abstract androidx.compose.ui.Modifier align(androidx.compose.ui.Modifier,androidx.compose.ui.Alignment$Horizontal)
     public abstract androidx.compose.ui.Modifier alignBy(androidx.compose.ui.Modifier,androidx.compose.ui.layout.VerticalAlignmentLine)
     public abstract androidx.compose.ui.Modifier alignBy(androidx.compose.ui.Modifier,kotlin.jvm.functions.Function1)
 androidx.compose.foundation.layout.ColumnScopeInstance:
     public static final int $stable
-    public androidx.compose.ui.Modifier align(androidx.compose.ui.Modifier,androidx.compose.ui.Alignment$Horizontal)
     public androidx.compose.ui.Modifier alignBy(androidx.compose.ui.Modifier,androidx.compose.ui.layout.VerticalAlignmentLine)
     public androidx.compose.ui.Modifier alignBy(androidx.compose.ui.Modifier,kotlin.jvm.functions.Function1)
 androidx.compose.foundation.layout.ConsumedInsetsModifier
@@ -2511,8 +2512,12 @@ androidx.compose.foundation.layout.FlowMeasurePolicy
 androidx.compose.foundation.layout.FlowResult
 androidx.compose.foundation.layout.FlowRowScope
 androidx.compose.foundation.layout.FlowRowScopeInstance
-androidx.compose.foundation.layout.HorizontalAlignElement
-androidx.compose.foundation.layout.HorizontalAlignNode
+androidx.compose.foundation.layout.HorizontalAlignElement:
+    public static final int $stable
+    public final androidx.compose.ui.Alignment$Horizontal getHorizontal()
+    public void inspectableProperties(androidx.compose.ui.platform.InspectorInfo)
+androidx.compose.foundation.layout.HorizontalAlignNode:
+    public final androidx.compose.ui.Alignment$Horizontal getHorizontal()
 androidx.compose.foundation.layout.InsetsConsumingModifier
 androidx.compose.foundation.layout.InsetsListener:
     public final androidx.compose.foundation.layout.WindowInsetsHolder getComposeInsets()
@@ -2568,15 +2573,15 @@ androidx.compose.foundation.layout.OffsetElement:
     public void inspectableProperties(androidx.compose.ui.platform.InspectorInfo)
 androidx.compose.foundation.layout.OffsetKt$absoluteOffset$1
 androidx.compose.foundation.layout.OffsetKt$absoluteOffset$2
+androidx.compose.foundation.layout.OffsetKt$offset$2
 androidx.compose.foundation.layout.OffsetKt:
     public static final androidx.compose.ui.Modifier absoluteOffset(androidx.compose.ui.Modifier,kotlin.jvm.functions.Function1)
     public static final androidx.compose.ui.Modifier absoluteOffset-VpY3zN4(androidx.compose.ui.Modifier,float,float)
     public static synthetic androidx.compose.ui.Modifier absoluteOffset-VpY3zN4$default(androidx.compose.ui.Modifier,float,float,int,java.lang.Object)
-androidx.compose.foundation.layout.OffsetPxElement:
-    public final kotlin.jvm.functions.Function1 getInspectorInfo()
-    public final kotlin.jvm.functions.Function1 getOffset()
-    public final boolean getRtlAware()
-    public void inspectableProperties(androidx.compose.ui.platform.InspectorInfo)
+    public static final androidx.compose.ui.Modifier offset(androidx.compose.ui.Modifier,kotlin.jvm.functions.Function1)
+androidx.compose.foundation.layout.OffsetPxElement
+androidx.compose.foundation.layout.OffsetPxNode$measure$1
+androidx.compose.foundation.layout.OffsetPxNode
 androidx.compose.foundation.layout.OrientationIndependentConstraints:
     private final long value
     private synthetic void <init>(long)
@@ -2612,7 +2617,6 @@ androidx.compose.foundation.layout.PaddingElement:
     public final void setTop-0680j_4(float)
 androidx.compose.foundation.layout.PaddingKt$absolutePadding$1
 androidx.compose.foundation.layout.PaddingKt:
-    public static synthetic androidx.compose.foundation.layout.PaddingValues PaddingValues-a9UjIt4$default(float,float,float,float,int,java.lang.Object)
     public static final androidx.compose.ui.Modifier absolutePadding-qDBjuR0(androidx.compose.ui.Modifier,float,float,float,float)
     public static synthetic androidx.compose.ui.Modifier absolutePadding-qDBjuR0$default(androidx.compose.ui.Modifier,float,float,float,float,int,java.lang.Object)
 androidx.compose.foundation.layout.PaddingNode:
@@ -2664,7 +2668,6 @@ androidx.compose.foundation.layout.RowColumnParentData:
     public final androidx.compose.foundation.layout.CrossAxisAlignment component3()
     public final androidx.compose.foundation.layout.RowColumnParentData copy(float,boolean,androidx.compose.foundation.layout.CrossAxisAlignment)
     public static synthetic androidx.compose.foundation.layout.RowColumnParentData copy$default(androidx.compose.foundation.layout.RowColumnParentData,float,boolean,androidx.compose.foundation.layout.CrossAxisAlignment,int,java.lang.Object)
-    public final void setCrossAxisAlignment(androidx.compose.foundation.layout.CrossAxisAlignment)
 androidx.compose.foundation.layout.RowKt:
     public static final void Row(androidx.compose.ui.Modifier,androidx.compose.foundation.layout.Arrangement$Horizontal,androidx.compose.ui.Alignment$Vertical,kotlin.jvm.functions.Function3,androidx.compose.runtime.Composer,int,int)
     public static final androidx.compose.ui.layout.MeasurePolicy getDefaultRowMeasurePolicy()
@@ -2694,6 +2697,7 @@ androidx.compose.foundation.layout.SizeElement:
     public void inspectableProperties(androidx.compose.ui.platform.InspectorInfo)
 androidx.compose.foundation.layout.SizeKt$requiredHeight-3ABfNKs$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$requiredHeightIn-VpY3zN4$$inlined$debugInspectorInfo$1
+androidx.compose.foundation.layout.SizeKt$requiredSize-VpY3zN4$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$requiredSizeIn-qDBjuR0$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$requiredWidth-3ABfNKs$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$requiredWidthIn-VpY3zN4$$inlined$debugInspectorInfo$1
@@ -2705,6 +2709,7 @@ androidx.compose.foundation.layout.SizeKt:
     public static final androidx.compose.ui.Modifier requiredHeightIn-VpY3zN4(androidx.compose.ui.Modifier,float,float)
     public static synthetic androidx.compose.ui.Modifier requiredHeightIn-VpY3zN4$default(androidx.compose.ui.Modifier,float,float,int,java.lang.Object)
     public static final androidx.compose.ui.Modifier requiredSize-6HolHcs(androidx.compose.ui.Modifier,long)
+    public static final androidx.compose.ui.Modifier requiredSize-VpY3zN4(androidx.compose.ui.Modifier,float,float)
     public static final androidx.compose.ui.Modifier requiredSizeIn-qDBjuR0(androidx.compose.ui.Modifier,float,float,float,float)
     public static synthetic androidx.compose.ui.Modifier requiredSizeIn-qDBjuR0$default(androidx.compose.ui.Modifier,float,float,float,float,int,java.lang.Object)
     public static final androidx.compose.ui.Modifier requiredWidth-3ABfNKs(androidx.compose.ui.Modifier,float)
@@ -4537,28 +4542,9 @@ androidx.compose.material.ripple.RippleHostView:
     private static final long MinimumRippleStateChangeTime
     private static final long ResetRippleDelayDuration
 androidx.compose.material3.ActualJvmKt
-androidx.compose.material3.AlertDialogDefaults
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$1$1
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$2$1$1
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$2$1
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$3$1$1
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$3$1
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$4$1
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$1
-androidx.compose.material3.AlertDialogKt$AlertDialogContent$2
-androidx.compose.material3.AlertDialogKt$AlertDialogFlowRow$1$measure$1
-androidx.compose.material3.AlertDialogKt$AlertDialogFlowRow$1
-androidx.compose.material3.AlertDialogKt$AlertDialogFlowRow$2
-androidx.compose.material3.AlertDialogKt
+androidx.compose.material3.AlertDialogDefaults:
+    public static final int $stable
 androidx.compose.material3.AnchorChangeHandler
-androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$1$1$1
-androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$1$1
-androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$1
-androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$2
-androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$3$1$1
-androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$3
-androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$4
-androidx.compose.material3.AndroidAlertDialog_androidKt
 androidx.compose.material3.AndroidMenu_androidKt$DropdownMenu$1
 androidx.compose.material3.AndroidMenu_androidKt$DropdownMenu$2
 androidx.compose.material3.AndroidMenu_androidKt$DropdownMenu$popupPositionProvider$1$1
@@ -4661,22 +4647,17 @@ androidx.compose.material3.ButtonDefaults:
     public final float getIconSpacing-D9Ej5fM()
     public final androidx.compose.foundation.BorderStroke getOutlinedButtonBorder(androidx.compose.runtime.Composer,int)
     public final androidx.compose.ui.graphics.Shape getOutlinedShape(androidx.compose.runtime.Composer,int)
-    public final androidx.compose.foundation.layout.PaddingValues getTextButtonContentPadding()
     public final androidx.compose.foundation.layout.PaddingValues getTextButtonWithIconContentPadding()
-    public final androidx.compose.ui.graphics.Shape getTextShape(androidx.compose.runtime.Composer,int)
     public final androidx.compose.material3.ButtonColors outlinedButtonColors-ro_MJ88(long,long,long,long,androidx.compose.runtime.Composer,int,int)
-    public final androidx.compose.material3.ButtonColors textButtonColors-ro_MJ88(long,long,long,long,androidx.compose.runtime.Composer,int,int)
 androidx.compose.material3.ButtonElevation:
     public static final int $stable
 androidx.compose.material3.ButtonKt$ElevatedButton$2
 androidx.compose.material3.ButtonKt$FilledTonalButton$2
 androidx.compose.material3.ButtonKt$OutlinedButton$2
-androidx.compose.material3.ButtonKt$TextButton$2
 androidx.compose.material3.ButtonKt:
     public static final void ElevatedButton(kotlin.jvm.functions.Function0,androidx.compose.ui.Modifier,boolean,androidx.compose.ui.graphics.Shape,androidx.compose.material3.ButtonColors,androidx.compose.material3.ButtonElevation,androidx.compose.foundation.BorderStroke,androidx.compose.foundation.layout.PaddingValues,androidx.compose.foundation.interaction.MutableInteractionSource,kotlin.jvm.functions.Function3,androidx.compose.runtime.Composer,int,int)
     public static final void FilledTonalButton(kotlin.jvm.functions.Function0,androidx.compose.ui.Modifier,boolean,androidx.compose.ui.graphics.Shape,androidx.compose.material3.ButtonColors,androidx.compose.material3.ButtonElevation,androidx.compose.foundation.BorderStroke,androidx.compose.foundation.layout.PaddingValues,androidx.compose.foundation.interaction.MutableInteractionSource,kotlin.jvm.functions.Function3,androidx.compose.runtime.Composer,int,int)
     public static final void OutlinedButton(kotlin.jvm.functions.Function0,androidx.compose.ui.Modifier,boolean,androidx.compose.ui.graphics.Shape,androidx.compose.material3.ButtonColors,androidx.compose.material3.ButtonElevation,androidx.compose.foundation.BorderStroke,androidx.compose.foundation.layout.PaddingValues,androidx.compose.foundation.interaction.MutableInteractionSource,kotlin.jvm.functions.Function3,androidx.compose.runtime.Composer,int,int)
-    public static final void TextButton(kotlin.jvm.functions.Function0,androidx.compose.ui.Modifier,boolean,androidx.compose.ui.graphics.Shape,androidx.compose.material3.ButtonColors,androidx.compose.material3.ButtonElevation,androidx.compose.foundation.BorderStroke,androidx.compose.foundation.layout.PaddingValues,androidx.compose.foundation.interaction.MutableInteractionSource,kotlin.jvm.functions.Function3,androidx.compose.runtime.Composer,int,int)
 androidx.compose.material3.CalendarDate
 androidx.compose.material3.CalendarModel
 androidx.compose.material3.CalendarModelImpl$Companion
@@ -5586,14 +5567,17 @@ androidx.compose.material3.SwipeableV2State$swipeDraggableState$1
 androidx.compose.material3.SwipeableV2State$targetValue$2
 androidx.compose.material3.SwipeableV2State$trySnapTo$1
 androidx.compose.material3.SwipeableV2State
-androidx.compose.material3.SwitchColors:
-    public static final int $stable
-androidx.compose.material3.SwitchDefaults:
-    public static final int $stable
-    public final float getIconSize-D9Ej5fM()
-androidx.compose.material3.SwitchKt:
-    public static final float getThumbDiameter()
-    public static final float getUncheckedThumbDiameter()
+androidx.compose.material3.SwitchColors
+androidx.compose.material3.SwitchDefaults
+androidx.compose.material3.SwitchKt$Switch$2
+androidx.compose.material3.SwitchKt$Switch$3$1
+androidx.compose.material3.SwitchKt$Switch$3$invoke$$inlined$onDispose$1
+androidx.compose.material3.SwitchKt$Switch$3
+androidx.compose.material3.SwitchKt$Switch$5
+androidx.compose.material3.SwitchKt$Switch$valueToOffset$1$1
+androidx.compose.material3.SwitchKt$SwitchImpl$1$1$1
+androidx.compose.material3.SwitchKt$SwitchImpl$2
+androidx.compose.material3.SwitchKt
 androidx.compose.material3.TabKt$LeadingIconTab$2
 androidx.compose.material3.TabKt$LeadingIconTab$3
 androidx.compose.material3.TabKt:
@@ -5892,7 +5876,12 @@ androidx.compose.material3.tokens.ColorLightTokens:
     public final long getSurfaceTint-0d7_KjU()
 androidx.compose.material3.tokens.DateInputModalTokens
 androidx.compose.material3.tokens.DatePickerModalTokens
-androidx.compose.material3.tokens.DialogTokens
+androidx.compose.material3.tokens.DialogTokens:
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getActionFocusLabelTextColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getActionHoverLabelTextColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getActionPressedLabelTextColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getContainerSurfaceTintLayerColor()
+    public final float getIconSize-D9Ej5fM()
 androidx.compose.material3.tokens.ElevatedButtonTokens
 androidx.compose.material3.tokens.ElevatedCardTokens
 androidx.compose.material3.tokens.ElevationTokens:
@@ -6104,42 +6093,21 @@ androidx.compose.material3.tokens.SliderTokens
 androidx.compose.material3.tokens.SnackbarTokens
 androidx.compose.material3.tokens.StateTokens
 androidx.compose.material3.tokens.SuggestionChipTokens
-androidx.compose.material3.tokens.SwitchTokens:
-    public static final float DisabledSelectedHandleOpacity
-    public static final float DisabledSelectedIconOpacity
-    public static final float DisabledTrackOpacity
-    public static final float DisabledUnselectedHandleOpacity
-    public static final float DisabledUnselectedIconOpacity
-    public final float getIconHandleHeight-D9Ej5fM()
-    public final float getIconHandleWidth-D9Ej5fM()
-    public final float getPressedHandleHeight-D9Ej5fM()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedFocusHandleColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedFocusIconColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedFocusTrackColor()
-    public final float getSelectedHandleHeight-D9Ej5fM()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedHoverHandleColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedHoverIconColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedHoverTrackColor()
-    public final float getSelectedIconSize-D9Ej5fM()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedPressedHandleColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedPressedIconColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getSelectedPressedTrackColor()
-    public final androidx.compose.material3.tokens.ShapeKeyTokens getStateLayerShape()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedFocusHandleColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedFocusIconColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedFocusTrackColor()
-    public final float getUnselectedHandleHeight-D9Ej5fM()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedHoverHandleColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedHoverIconColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedHoverTrackColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedHoverTrackOutlineColor()
-    public final float getUnselectedIconSize-D9Ej5fM()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedPressedHandleColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedPressedIconColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedPressedTrackColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedPressedTrackOutlineColor()
-    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getUnselectedTrackOutlineColor()
-androidx.compose.material3.tokens.TextButtonTokens
+androidx.compose.material3.tokens.SwitchTokens
+androidx.compose.material3.tokens.TextButtonTokens:
+    public static final float DisabledIconOpacity
+    public static final float DisabledLabelTextOpacity
+    public final float getContainerHeight-D9Ej5fM()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getDisabledIconColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getFocusIconColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getFocusLabelTextColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getHoverIconColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getHoverLabelTextColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getIconColor()
+    public final float getIconSize-D9Ej5fM()
+    public final androidx.compose.material3.tokens.TypographyKeyTokens getLabelTextFont()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getPressedIconColor()
+    public final androidx.compose.material3.tokens.ColorSchemeKeyTokens getPressedLabelTextColor()
 androidx.compose.material3.tokens.TimeInputTokens
 androidx.compose.material3.tokens.TimePickerTokens
 androidx.compose.material3.tokens.TopAppBarLargeTokens
@@ -7707,7 +7675,6 @@ androidx.compose.ui.Alignment$Companion:
     public static synthetic void getCenterHorizontally$annotations()
     public static synthetic void getCenterStart$annotations()
     public static synthetic void getCenterVertically$annotations()
-    public final androidx.compose.ui.Alignment$Horizontal getEnd()
     public static synthetic void getEnd$annotations()
     public static synthetic void getStart$annotations()
     public static synthetic void getTop$annotations()
@@ -11686,7 +11653,6 @@ androidx.compose.ui.semantics.SemanticsPropertiesKt:
     public static final void setCustomActions(androidx.compose.ui.semantics.SemanticsPropertyReceiver,java.util.List)
     public static final void setImeAction-4L7nppU(androidx.compose.ui.semantics.SemanticsPropertyReceiver,int)
     public static final void setLiveRegion-hR3wRGc(androidx.compose.ui.semantics.SemanticsPropertyReceiver,int)
-    public static final void setPaneTitle(androidx.compose.ui.semantics.SemanticsPropertyReceiver,java.lang.String)
     public static final void setProgress(androidx.compose.ui.semantics.SemanticsPropertyReceiver,java.lang.String,kotlin.jvm.functions.Function1)
     public static synthetic void setProgress$default(androidx.compose.ui.semantics.SemanticsPropertyReceiver,java.lang.String,kotlin.jvm.functions.Function1,int,java.lang.Object)
     public static final void setProgressBarRangeInfo(androidx.compose.ui.semantics.SemanticsPropertyReceiver,androidx.compose.ui.semantics.ProgressBarRangeInfo)
@@ -19992,10 +19958,16 @@ com.modernqr.app.data.HistoryItem:
     public final java.lang.String component4()
     public final long component5()
     public final boolean component6()
+com.modernqr.app.data.SettingsManager$Companion:
+    public final androidx.datastore.preferences.core.Preferences$Key getAUTO_SCAN()
+com.modernqr.app.data.SettingsManager$setAutoScan$2
 com.modernqr.app.data.SettingsManager$special$$inlined$map$1$2$1:
     java.lang.Object L$0
 com.modernqr.app.data.SettingsManager$special$$inlined$map$2$2$1:
     java.lang.Object L$0
+com.modernqr.app.data.SettingsManager:
+    public final kotlinx.coroutines.flow.Flow getAutoScanFlow()
+    public final java.lang.Object setAutoScan(boolean,kotlin.coroutines.Continuation)
 com.ritikqrscanner.app.BuildConfig
 com.ritikqrscanner.app.R$drawable:
     private void <init>()
@@ -28373,18 +28345,18 @@ androidx.compose.animation.core.Animatable:
     public static final void access$setTargetValue(androidx.compose.animation.core.Animatable,java.lang.Object)
     public static java.lang.Object animateTo()
     public static androidx.compose.runtime.State asState()
+    public static java.lang.Object clampToBounds()
     public static void endAnimation()
     public static androidx.compose.animation.core.AnimationState getInternalState$animation_core_release()
     public static java.lang.Object getTargetValue()
     public static androidx.compose.animation.core.TwoWayConverterImpl getTypeConverter()
     public static java.lang.Object getVelocity()
     public static androidx.compose.animation.core.AnimationVector getVelocityVector()
-    public final boolean isRunning()
+    public static boolean isRunning()
     public static java.lang.Object runAnimation()
     public final void setRunning(boolean)
     public static void setTargetValue()
     public final java.lang.Object stop(kotlin.coroutines.Continuation)
-    public static void updateBounds()
 androidx.compose.animation.core.AnimatableKt:
     public static final synthetic androidx.compose.animation.core.AnimationVector1D access$getNegativeInfinityBounds1D$p()
     public static final synthetic androidx.compose.animation.core.AnimationVector2D access$getNegativeInfinityBounds2D$p()
@@ -28631,7 +28603,7 @@ androidx.compose.animation.core.SuspendAnimationKt$animate$9:
     public final void invoke$12()
 androidx.compose.animation.core.SuspendAnimationKt$animateDecay$4
 androidx.compose.animation.core.SuspendAnimationKt$animateTo$2
-androidx.compose.animation.core.SuspendAnimationKt$callWithFrameNanos$2$$InternalSyntheticThrowCCEIfNotNull$15$d74b780cc410b435af03a536a5dfede4d4788a6e2e2f2cec81fc3900eacb1628$0
+androidx.compose.animation.core.SuspendAnimationKt$callWithFrameNanos$2$$InternalSyntheticThrowCCEIfNotNull$13$d74b780cc410b435af03a536a5dfede4d4788a6e2e2f2cec81fc3900eacb1628$0
 androidx.compose.animation.core.SuspendAnimationKt$callWithFrameNanos$2:
     public static androidx.compose.runtime.snapshots.ReadonlySnapshot invoke()
     public static androidx.compose.runtime.snapshots.Snapshot invoke()
@@ -28723,6 +28695,7 @@ androidx.compose.animation.core.TransitionState:
     public abstract void transitionConfigured$animation_core_release()
 androidx.compose.animation.core.TweenSpec:
     static void <clinit>()
+    public void <init>(int,androidx.compose.animation.core.Easing)
     public final androidx.compose.animation.core.VectorizedTweenSpec vectorize()
 androidx.compose.animation.core.TwoWayConverter
 androidx.compose.animation.core.TwoWayConverterImpl:
@@ -28855,7 +28828,7 @@ androidx.compose.foundation.BackgroundKt$background-bw27NRU$$inlined$debugInspec
 androidx.compose.foundation.BackgroundKt:
     public static synthetic androidx.compose.ui.Modifier background-bw27NRU$default(androidx.compose.ui.Modifier,long)
     public static final androidx.compose.ui.Modifier border(androidx.compose.foundation.BorderStroke,androidx.compose.ui.graphics.Shape)
-    public static final androidx.compose.ui.Modifier border-xT4_qwU(androidx.compose.ui.Modifier,float,long,androidx.compose.ui.graphics.Shape)
+    public static final androidx.compose.ui.Modifier border-xT4_qwU(androidx.compose.ui.Modifier,float,long,androidx.compose.foundation.shape.RoundedCornerShape)
     public static final androidx.compose.ui.Modifier border-ziNgDLE(androidx.compose.ui.Modifier,float,androidx.compose.ui.graphics.Brush,androidx.compose.ui.graphics.Shape)
     public static final androidx.compose.ui.Modifier overscroll(androidx.compose.ui.Modifier,androidx.compose.foundation.OverscrollEffect)
     public static final androidx.compose.ui.Modifier scroll(androidx.compose.ui.Modifier,androidx.compose.foundation.ScrollState,boolean,androidx.compose.foundation.gestures.FlingBehavior,boolean,boolean)
@@ -29167,8 +29140,8 @@ androidx.compose.foundation.ScrollingLayoutElement:
     public static void update$8()
 androidx.compose.foundation.ScrollingLayoutNode$measure$1:
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
-    public final void invoke(boolean)
     public static void invoke$18()
+    public final void invoke$19()
     public final long invoke-MK-Hz9U()
 androidx.compose.foundation.ScrollingLayoutNode:
     public static final int $stable
@@ -29298,7 +29271,7 @@ androidx.compose.foundation.gestures.DragGestureDetectorKt:
     public static final androidx.compose.foundation.gestures.PointerDirectionConfig getBidirectionalPointerDirectionConfig()
     public static final float pointerSlop-E8SPZFQ(androidx.compose.ui.platform.ViewConfiguration,int)
 androidx.compose.foundation.gestures.DraggableKt$awaitDownAndSlop$postPointerSlop$1:
-    public static void invoke$19()
+    public static void invoke$20()
     public final androidx.compose.ui.layout.MeasureResult invoke-0kLqBqw()
     public final void invoke-Uv8p0NA()
 androidx.compose.foundation.gestures.DraggableKt$awaitDrag$2$$InternalSyntheticThrowCCEIfNotNull$11$6248f6bf5d539406e6c38e50f6b7db190ea5feba62b650c932f558cc96423db6$0
@@ -29485,7 +29458,6 @@ androidx.compose.foundation.gestures.TapGestureDetectorKt:
     public static synthetic java.lang.Object waitForUpOrCancellation$default(androidx.compose.ui.input.pointer.SuspendingPointerInputModifierNodeImpl$PointerEventHandlerCoroutine,kotlin.coroutines.Continuation)
 androidx.compose.foundation.gestures.UpdatableAnimationState$Companion
 androidx.compose.foundation.gestures.UpdatableAnimationState$animateToZero$4:
-    public final androidx.compose.runtime.DisposableEffectResult invoke(androidx.compose.runtime.DisposableEffectScope)
     public final void invoke(androidx.compose.ui.graphics.drawscope.ContentDrawScope)
     public final void invoke$12()
 androidx.compose.foundation.gestures.UpdatableAnimationState$animateToZero$5
@@ -29552,8 +29524,6 @@ androidx.compose.foundation.layout.Arrangement$Center$1:
     private static java.lang.String toString$androidx$compose$foundation$layout$Arrangement$SpaceBetween$1()
     private static java.lang.String toString$androidx$compose$foundation$layout$Arrangement$SpaceEvenly$1()
 androidx.compose.foundation.layout.Arrangement$End$1:
-    public final synthetic int $r8$classId
-    public synthetic void <init>()
     private static java.lang.String toString$androidx$compose$foundation$layout$Arrangement$End$1()
     private static java.lang.String toString$androidx$compose$foundation$layout$Arrangement$Start$1()
 androidx.compose.foundation.layout.Arrangement$HorizontalOrVertical
@@ -29569,11 +29539,11 @@ androidx.compose.foundation.layout.Arrangement$Top$1
 androidx.compose.foundation.layout.Arrangement$spacedBy$1:
     public static java.lang.Integer invoke$3()
 androidx.compose.foundation.layout.Arrangement:
-    public static final androidx.compose.foundation.layout.Arrangement$Horizontal End
     public static final androidx.compose.foundation.layout.Arrangement INSTANCE
     public static final androidx.compose.foundation.layout.Arrangement$HorizontalOrVertical SpaceAround
     public static androidx.compose.foundation.layout.Arrangement$Vertical getBottom()
     public static androidx.compose.foundation.layout.Arrangement$HorizontalOrVertical getCenter()
+    public static androidx.compose.foundation.layout.Arrangement$Horizontal getEnd()
     public static androidx.compose.foundation.layout.Arrangement$HorizontalOrVertical getSpaceBetween()
     public static androidx.compose.foundation.layout.Arrangement$HorizontalOrVertical getSpaceEvenly()
     public static androidx.compose.foundation.layout.Arrangement$Horizontal getStart()
@@ -29603,13 +29573,14 @@ androidx.compose.foundation.layout.BoxMeasurePolicy$measure$2:
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
 androidx.compose.foundation.layout.BoxMeasurePolicy$measure$5:
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
-androidx.compose.foundation.layout.BoxScope:
-    public abstract androidx.compose.ui.Modifier align(androidx.compose.ui.Modifier,androidx.compose.ui.BiasAlignment)
+androidx.compose.foundation.layout.BoxScope
 androidx.compose.foundation.layout.BoxScopeInstance$align$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.ColumnScope:
-    public abstract androidx.compose.ui.Modifier weight()
+    public abstract androidx.compose.ui.Modifier align(androidx.compose.ui.Modifier,androidx.compose.ui.BiasAlignment$Horizontal)
+    public abstract androidx.compose.ui.Modifier weight(androidx.compose.ui.Modifier,boolean)
+    public static androidx.compose.ui.Modifier weight$default(androidx.compose.ui.Modifier)
 androidx.compose.foundation.layout.ColumnScopeInstance:
-    public final androidx.compose.ui.Modifier weight()
+    public final androidx.compose.ui.Modifier align(androidx.compose.ui.Modifier,androidx.compose.ui.BiasAlignment$Horizontal)
 androidx.compose.foundation.layout.CrossAxisAlignment$CenterCrossAxisAlignment
 androidx.compose.foundation.layout.CrossAxisAlignment$Companion
 androidx.compose.foundation.layout.CrossAxisAlignment$EndCrossAxisAlignment
@@ -29654,6 +29625,15 @@ androidx.compose.foundation.layout.FillNode$measure$1
 androidx.compose.foundation.layout.FillNode:
     public final void setDirection()
     public static void setFraction()
+androidx.compose.foundation.layout.HorizontalAlignElement:
+    static void <clinit>()
+    public static androidx.compose.foundation.layout.HorizontalAlignNode create()
+    public static void update$12()
+androidx.compose.foundation.layout.HorizontalAlignNode:
+    public static final int $stable
+    static void <clinit>()
+    public final androidx.compose.foundation.layout.RowColumnParentData modifyParentData()
+    public static void setHorizontal()
 androidx.compose.foundation.layout.InsetsListener:
     public static int getDispatchMode()
     public static int getDispatchMode$androidx$core$view$WindowInsetsAnimationCompat$Callback()
@@ -29714,7 +29694,7 @@ androidx.compose.foundation.layout.IntrinsicWidthElement:
     public final boolean enforceIncoming
     public final kotlin.jvm.functions.Function1 inspectorInfo
     public static androidx.compose.foundation.layout.IntrinsicWidthNode create()
-    public static void update$12()
+    public static void update$13()
 androidx.compose.foundation.layout.IntrinsicWidthNode:
     public static long calculateContentConstraints-l58MMJ0()
     public static boolean getEnforceIncoming()
@@ -29733,25 +29713,23 @@ androidx.compose.foundation.layout.LayoutOrientation
 androidx.compose.foundation.layout.LayoutWeightElement:
     static void <clinit>()
     public static androidx.compose.foundation.layout.LayoutWeightNode create()
-    public static void update$13()
+    public static void update$14()
 androidx.compose.foundation.layout.LayoutWeightNode:
     public static final int $stable
     static void <clinit>()
-    public static androidx.compose.foundation.layout.RowColumnParentData modifyParentData()
+    public final androidx.compose.foundation.layout.RowColumnParentData modifyParentData()
     public static void setFill()
     public static void setWeight()
 androidx.compose.foundation.layout.OffsetElement:
     public final kotlin.jvm.functions.Function1 inspectorInfo
     public final boolean rtlAware
     public static androidx.compose.foundation.layout.OffsetNode create()
-    public static void update$14()
-androidx.compose.foundation.layout.OffsetKt$offset$1$$InternalSyntheticThrowCCEIfNotNull$21$5bcb6dee8b9b2469a38fe110ab6f6b8ad7f567839d1a0c657a779e0283c0f3cf$0
+    public static void update$15()
+androidx.compose.foundation.layout.OffsetKt$offset$1$$InternalSyntheticThrowCCEIfNotNull$21$1ae436ebedfae0b5fb552cde8492625fa9d24cf797ff049f898500e0010063b8$0
 androidx.compose.foundation.layout.OffsetKt$offset$1$$InternalSyntheticThrowCCEIfNotNull$21$a9286e2781ed1ab8cd295da0712e9cdd19bd6c75cc9a0c81b29d1002a5ed08a8$0
+androidx.compose.foundation.layout.OffsetKt$offset$1$$InternalSyntheticThrowCCEIfNotNull$21$abf17e578b52d983ca76a6814618edaf1736a62af0120d5de7a72242506d63c1$0
 androidx.compose.foundation.layout.OffsetKt$offset$1$$InternalSyntheticThrowCCEIfNotNull$21$ea1a6592a9bc991c94bb040e16a8e98e667609b54152d4f5c257d94818537e2f$0
-androidx.compose.foundation.layout.OffsetKt$offset$1:
-    public static java.lang.Float invoke$2()
-    public final void invoke$6()
-androidx.compose.foundation.layout.OffsetKt$offset$2
+androidx.compose.foundation.layout.OffsetKt$offset$1
 androidx.compose.foundation.layout.OffsetKt
 androidx.compose.foundation.layout.OffsetNode$measure$1
 androidx.compose.foundation.layout.OffsetNode:
@@ -29761,17 +29739,6 @@ androidx.compose.foundation.layout.OffsetNode:
     public final void setRtlAware()
     public static void setX-0680j_4()
     public static void setY-0680j_4()
-androidx.compose.foundation.layout.OffsetPxElement:
-    public final kotlin.jvm.functions.Function1 inspectorInfo
-    public final boolean rtlAware
-    public static androidx.compose.foundation.layout.OffsetPxNode create()
-    public static void update$15()
-androidx.compose.foundation.layout.OffsetPxNode$measure$1
-androidx.compose.foundation.layout.OffsetPxNode:
-    public static kotlin.jvm.functions.Function1 getOffset()
-    public final boolean getRtlAware()
-    public static void setOffset()
-    public final void setRtlAware()
 androidx.compose.foundation.layout.OrientationIndependentConstraints
 androidx.compose.foundation.layout.PaddingElement:
     public final kotlin.jvm.functions.Function1 inspectorInfo
@@ -29785,10 +29752,9 @@ androidx.compose.foundation.layout.PaddingKt$padding$2
 androidx.compose.foundation.layout.PaddingKt$padding$3$$InternalSyntheticThrowCCEIfNotNull$21$1bcf4eae62363dda9368a85a4fa43d048885a874ddfc5fc1ec44ec43330bff82$0
 androidx.compose.foundation.layout.PaddingKt$padding$3$$InternalSyntheticThrowCCEIfNotNull$21$42845ab4d218f0c770370ab4b3373d6fc120156cdb60fa030c13e84e1f082c93$0
 androidx.compose.foundation.layout.PaddingKt$padding$3$$InternalSyntheticThrowCCEIfNotNull$21$685740984b2c109010ac69eb0162b3727586538070d2c82bd28543fd160ab85b$0
+androidx.compose.foundation.layout.PaddingKt$padding$3$$InternalSyntheticThrowCCEIfNotNull$21$739727459e9e6b2b3a2e1a868003d34c0f494ef72749de2f6f0f61e278ca6719$0
 androidx.compose.foundation.layout.PaddingKt$padding$3$$InternalSyntheticThrowCCEIfNotNull$21$af4842a18a5c4d922e7dd60e78dd12094bad68ed51eb5e64bfb4e1b05529bbd3$0
-androidx.compose.foundation.layout.PaddingKt$padding$3:
-    public final void invoke$6()
-    public static long invoke-Bjo55l4$1()
+androidx.compose.foundation.layout.PaddingKt$padding$3
 androidx.compose.foundation.layout.PaddingKt$padding$4
 androidx.compose.foundation.layout.PaddingKt
 androidx.compose.foundation.layout.PaddingNode$measure$1
@@ -29843,6 +29809,7 @@ androidx.compose.foundation.layout.RowColumnParentData:
     public static androidx.compose.foundation.layout.CrossAxisAlignment getCrossAxisAlignment()
     public static boolean getFill()
     public static float getWeight()
+    public static void setCrossAxisAlignment()
     public static void setFill()
     public static void setWeight()
 androidx.compose.foundation.layout.RowScope:
@@ -29856,7 +29823,6 @@ androidx.compose.foundation.layout.SizeElement:
 androidx.compose.foundation.layout.SizeKt$height-3ABfNKs$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$heightIn-VpY3zN4$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$requiredSize-3ABfNKs$$inlined$debugInspectorInfo$1
-androidx.compose.foundation.layout.SizeKt$requiredSize-VpY3zN4$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$size-3ABfNKs$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$size-VpY3zN4$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$sizeIn-qDBjuR0$$inlined$debugInspectorInfo$1
@@ -29865,8 +29831,6 @@ androidx.compose.foundation.layout.SizeKt:
     public static final androidx.compose.foundation.layout.FillElement FillWholeMaxHeight
     public static final androidx.compose.foundation.layout.WrapContentElement WrapContentWidthCenter
     public static final androidx.compose.foundation.layout.WrapContentElement WrapContentWidthStart
-    public static androidx.compose.ui.Modifier fillMaxSize$default()
-    public static androidx.compose.ui.Modifier fillMaxWidth$default(androidx.compose.ui.Modifier)
 androidx.compose.foundation.layout.SizeMode$EnumUnboxingLocalUtility:
     static void <clinit>()
     public static int _valueOf(java.lang.String)
@@ -30474,7 +30438,7 @@ androidx.compose.foundation.text.AndroidCursorHandle_androidKt$drawCursorHandle$
 androidx.compose.foundation.text.AnnotatedStringResolveInlineContentKt$InlineChildren$1$2$1
 androidx.compose.foundation.text.AnnotatedStringResolveInlineContentKt$InlineChildren$2
 androidx.compose.foundation.text.BasicTextFieldKt$BasicTextField$1:
-    public final void invoke$20()
+    public final void invoke$21()
 androidx.compose.foundation.text.BasicTextFieldKt$BasicTextField$3$1
 androidx.compose.foundation.text.BasicTextFieldKt$BasicTextField$4$1
 androidx.compose.foundation.text.BasicTextFieldKt
@@ -30482,15 +30446,13 @@ androidx.compose.foundation.text.BasicTextKt$BasicText$1:
     public final synthetic androidx.compose.ui.graphics.ColorProducer $color
     public final void invoke(androidx.compose.runtime.Composer,int)
 androidx.compose.foundation.text.BasicTextKt$BasicText$3$1:
-    public final androidx.compose.runtime.DisposableEffectResult invoke(androidx.compose.runtime.DisposableEffectScope)
     public final void invoke(int)
-    public final void invoke(boolean)
-    public final void invoke$21()
+    public final void invoke$19()
+    public final void invoke$22()
     public final void invoke$4()
     public final void invoke-ozmzZPI()
 androidx.compose.foundation.text.BasicTextKt$BasicText$4$1:
     public final java.util.List invoke()
-    public final void invoke()
 androidx.compose.foundation.text.BasicTextKt$BasicText$5:
     public final synthetic androidx.compose.ui.graphics.ColorProducer $color
     public final void invoke(androidx.compose.runtime.Composer,int)
@@ -30508,14 +30470,14 @@ androidx.compose.foundation.text.BasicTextKt$selectionIdSaver$2:
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
     public static androidx.compose.foundation.text.TextFieldScrollerPosition invoke$1()
     public static java.lang.Long invoke$2()
-    public static void invoke$22()
+    public static void invoke$23()
     public final void invoke$3()
 androidx.compose.foundation.text.BasicTextKt
 androidx.compose.foundation.text.BasicText_androidKt
 androidx.compose.foundation.text.ClickableTextKt$ClickableText$1:
-    public final void invoke$20()
+    public final void invoke$21()
 androidx.compose.foundation.text.ClickableTextKt$ClickableText$2$1:
-    public final void invoke$20()
+    public final void invoke$21()
     public final void invoke-k-4lQ0M()
 androidx.compose.foundation.text.ClickableTextKt$ClickableText$3:
     public final void invoke(androidx.compose.runtime.Composer,int)
@@ -30538,7 +30500,7 @@ androidx.compose.foundation.text.ComposableSingletons$CoreTextFieldKt:
     public static final androidx.compose.foundation.text.ComposableSingletons$CoreTextFieldKt INSTANCE
     public static kotlin.jvm.functions.Function3 getLambda-1$foundation_release()
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$1:
-    public final void invoke$20()
+    public final void invoke$21()
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$2$1
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$2$2:
     public final java.lang.Object emit()
@@ -30560,7 +30522,7 @@ androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$5:
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$6
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$decorationBoxModifier$1:
     public final void invoke(androidx.compose.ui.layout.LayoutCoordinates)
-    public final void invoke(boolean)
+    public final void invoke$19()
     public final void invoke$3()
     public final java.lang.Boolean invoke$4()
     public final void invoke-KlQnJC8()
@@ -30568,7 +30530,7 @@ androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$drawModifier$1
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$focusModifier$1$1$1:
     public final java.lang.Object invoke$3()
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$focusModifier$1:
-    public static void invoke$23()
+    public static void invoke$24()
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$onPositionedModifier$1
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$pointerModifier$1
 androidx.compose.foundation.text.CoreTextFieldKt$CoreTextField$pointerModifier$2:
@@ -31227,11 +31189,9 @@ androidx.compose.foundation.text.selection.SelectionAdjustmentKt:
     public static final boolean contains(androidx.compose.runtime.PersistentCompositionLocalMap,androidx.compose.runtime.CompositionLocal)
     public static final androidx.compose.runtime.DerivedSnapshotState derivedStateOf$1(kotlin.jvm.functions.Function0)
     public static final androidx.compose.foundation.text.selection.Selection ensureAtLeastOneChar(androidx.compose.foundation.text.selection.Selection,androidx.compose.foundation.text.selection.SingleSelectionLayout)
-    public static final int getCurrentCompositeKeyHash(androidx.compose.runtime.Composer)
     public static final long getPositionInRoot(androidx.compose.ui.draganddrop.DragAndDropEvent)
     public static final androidx.compose.runtime.saveable.SaverKt$Saver$1 listSaver(kotlin.jvm.functions.Function2,kotlin.jvm.functions.Function1)
     public static final androidx.compose.runtime.ParcelableSnapshotMutableLongState mutableLongStateOf(long)
-    public static synthetic androidx.compose.runtime.ParcelableSnapshotMutableState mutableStateOf$default(java.lang.Object)
     public static final androidx.compose.runtime.SnapshotMutationPolicy neverEqualPolicy()
     public static final java.lang.Object[] presizedBufferWith(java.lang.Object)
     public static final androidx.compose.runtime.SnapshotMutationPolicy referentialEqualityPolicy()
@@ -31282,7 +31242,7 @@ androidx.compose.foundation.text.selection.SelectionLayout:
 androidx.compose.foundation.text.selection.SelectionLayoutKt$isCollapsed$1:
     public final synthetic int $r8$classId
     public final androidx.compose.ui.node.TraversableNode$Companion$TraverseDescendantsAction invoke$1()
-    public static void invoke$24()
+    public static void invoke$25()
 androidx.compose.foundation.text.selection.SelectionLayoutKt
 androidx.compose.foundation.text.selection.SelectionMagnifierKt$UnspecifiedSafeOffsetVectorConverter$1:
     public final void invoke$3()
@@ -31308,7 +31268,7 @@ androidx.compose.foundation.text.selection.SelectionManagerKt:
 androidx.compose.foundation.text.selection.SelectionRegistrar
 androidx.compose.foundation.text.selection.SelectionRegistrarKt$LocalSelectionRegistrar$1:
     public static androidx.compose.foundation.text.selection.TextSelectionColors invoke()
-    public static void invoke$25()
+    public static void invoke$26()
     private static synthetic bridge java.lang.Object invoke$androidx$compose$foundation$text$selection$SelectionRegistrarKt$LocalSelectionRegistrar$1()
 androidx.compose.foundation.text.selection.SelectionRegistrarKt:
     public static final boolean hasSelection(long)
@@ -31538,6 +31498,39 @@ androidx.compose.material.ripple.UnprojectedRipple:
     public static long calculateRippleColor-5vOe2sY()
     public static void setColor-DxMtmZc()
     public static void trySetRadius()
+androidx.compose.material3.AlertDialogDefaults:
+    public static final androidx.compose.material3.AlertDialogDefaults INSTANCE
+    public static long getContainerColor()
+    public static long getIconContentColor()
+    public static androidx.compose.ui.graphics.Shape getShape()
+    public static long getTextContentColor()
+    public static long getTitleContentColor()
+    public static float getTonalElevation-D9Ej5fM()
+androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$2$1
+androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$3$1$1
+androidx.compose.material3.AlertDialogKt$AlertDialogContent$1$1$3$1
+androidx.compose.material3.AlertDialogKt$AlertDialogContent$1:
+    public final void invoke(androidx.compose.runtime.Composer,int)
+androidx.compose.material3.AlertDialogKt$AlertDialogContent$2:
+    public final void invoke(androidx.compose.runtime.Composer,int)
+androidx.compose.material3.AlertDialogKt$AlertDialogFlowRow$1$measure$1:
+    public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
+androidx.compose.material3.AlertDialogKt$AlertDialogFlowRow$2:
+    public final void invoke(androidx.compose.runtime.Composer,int)
+androidx.compose.material3.AlertDialogKt:
+    public static final float getDialogMaxWidth()
+    public static final float getDialogMinWidth()
+androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$1$1
+androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$1:
+    public final void invoke(androidx.compose.runtime.Composer,int)
+androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$2:
+    public final void invoke(androidx.compose.runtime.Composer,int)
+androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$3$1$1
+androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$3
+androidx.compose.material3.AndroidAlertDialog_androidKt$AlertDialog$4
+androidx.compose.material3.AndroidAlertDialog_androidKt:
+    public static final synthetic float access$getButtonsCrossAxisSpacing$p()
+    public static final synthetic float access$getButtonsMainAxisSpacing$p()
 androidx.compose.material3.AndroidMenu_androidKt$DropdownMenuItem$2:
     public final void invoke(androidx.compose.runtime.Composer,int)
 androidx.compose.material3.AndroidMenu_androidKt
@@ -31553,7 +31546,6 @@ androidx.compose.material3.ButtonDefaults:
     public static final androidx.compose.material3.ButtonDefaults INSTANCE
     public static final float IconSize
     public static final float IconSpacing
-    public static final androidx.compose.foundation.layout.PaddingValues TextButtonContentPadding
     public static final float TextButtonHorizontalPadding
     public static final androidx.compose.foundation.layout.PaddingValues TextButtonWithIconContentPadding
     public static final float TextButtonWithIconHorizontalEndPadding
@@ -31563,6 +31555,9 @@ androidx.compose.material3.ButtonDefaults:
     public static float getMinHeight-D9Ej5fM()
     public static float getMinWidth-D9Ej5fM()
     public static androidx.compose.ui.graphics.Shape getShape()
+    public static androidx.compose.foundation.layout.PaddingValues getTextButtonContentPadding()
+    public static androidx.compose.ui.graphics.Shape getTextShape()
+    public static androidx.compose.material3.ButtonColors textButtonColors-ro_MJ88()
 androidx.compose.material3.ButtonElevation$animateElevation$1$1$1:
     public static java.lang.Object emit$1()
 androidx.compose.material3.ButtonElevation$animateElevation$1$1:
@@ -31579,8 +31574,7 @@ androidx.compose.material3.ButtonKt$Button$2:
     public final void invoke(androidx.compose.ui.semantics.SemanticsPropertyReceiver)
 androidx.compose.material3.ButtonKt$Button$3$1
 androidx.compose.material3.ButtonKt$Button$3
-androidx.compose.material3.ButtonKt$Button$4:
-    public final void invoke(androidx.compose.runtime.Composer,int)
+androidx.compose.material3.ButtonKt$TextButton$2
 androidx.compose.material3.ButtonKt
 androidx.compose.material3.CardColors:
     static void <clinit>()
@@ -31702,8 +31696,7 @@ androidx.compose.material3.ExposedDropdownMenuBoxScope$ExposedDropdownMenu$1:
 androidx.compose.material3.ExposedDropdownMenuBoxScope$ExposedDropdownMenu$2:
     public final void invoke(androidx.compose.runtime.Composer,int)
 androidx.compose.material3.ExposedDropdownMenuBoxScope$ExposedDropdownMenu$popupPositionProvider$1$1:
-    public final void invoke(androidx.compose.runtime.Composer,int)
-    public static void invoke$26()
+    public static void invoke$27()
 androidx.compose.material3.ExposedDropdownMenuBoxScope
 androidx.compose.material3.ExposedDropdownMenuDefaults$TrailingIcon$1
 androidx.compose.material3.ExposedDropdownMenuDefaults:
@@ -31772,6 +31765,7 @@ androidx.compose.material3.InteractiveComponentSizeKt$minimumInteractiveComponen
     public final androidx.compose.ui.Modifier invoke(androidx.compose.ui.Modifier,androidx.compose.runtime.Composer)
 androidx.compose.material3.InteractiveComponentSizeKt:
     public static final androidx.compose.runtime.ProvidableCompositionLocal LocalMinimumTouchTargetEnforcement
+    public static final androidx.compose.ui.Modifier minimumInteractiveComponentSize(androidx.compose.ui.Modifier)
 androidx.compose.material3.MappedInteractionSource$special$$inlined$map$1$2
 androidx.compose.material3.MappedInteractionSource:
     public static androidx.compose.foundation.interaction.PressInteraction$Press mapPress()
@@ -31799,6 +31793,7 @@ androidx.compose.material3.MenuKt$DropdownMenuContent$2
 androidx.compose.material3.MenuKt$DropdownMenuContent$3
 androidx.compose.material3.MenuKt$DropdownMenuContent$alpha$2
 androidx.compose.material3.MenuKt$DropdownMenuContent$scale$2
+androidx.compose.material3.MenuKt$DropdownMenuItemContent$1$1$1
 androidx.compose.material3.MenuKt$DropdownMenuItemContent$1$1$2:
     public final void invoke(androidx.compose.runtime.Composer,int)
 androidx.compose.material3.MenuKt$DropdownMenuItemContent$1$1$3
@@ -31939,30 +31934,6 @@ androidx.compose.material3.SurfaceKt$Surface$1:
 androidx.compose.material3.SurfaceKt$Surface$3:
     public final synthetic int $$changed
     public final void invoke(androidx.compose.runtime.Composer,int)
-androidx.compose.material3.SwitchColors:
-    static void <clinit>()
-    public static androidx.compose.runtime.State borderColor$material3_release()
-    public static androidx.compose.runtime.State iconColor$material3_release()
-    public static androidx.compose.runtime.State thumbColor$material3_release()
-    public static androidx.compose.runtime.State trackColor$material3_release()
-androidx.compose.material3.SwitchDefaults
-androidx.compose.material3.SwitchKt$Switch$2:
-    public final void invoke()
-androidx.compose.material3.SwitchKt$Switch$3$1:
-    public final java.lang.Object invoke$3()
-androidx.compose.material3.SwitchKt$Switch$3$invoke$$inlined$onDispose$1:
-    public final synthetic int $r8$classId
-    public synthetic void <init>(int)
-androidx.compose.material3.SwitchKt$Switch$3
-androidx.compose.material3.SwitchKt$Switch$5:
-    public final void invoke(androidx.compose.runtime.Composer,int)
-androidx.compose.material3.SwitchKt$Switch$valueToOffset$1$1
-androidx.compose.material3.SwitchKt$SwitchImpl$1$1$1
-androidx.compose.material3.SwitchKt$SwitchImpl$2:
-    public final void invoke(androidx.compose.runtime.Composer,int)
-androidx.compose.material3.SwitchKt:
-    public static final float ThumbPadding
-    public static final boolean SwitchImpl_0DmnUew$lambda$7(androidx.compose.runtime.MutableState)
 androidx.compose.material3.SystemBarsDefaultInsets_androidKt
 androidx.compose.material3.TabKt$Tab$2:
     public final void invoke(androidx.compose.foundation.layout.ColumnScope,androidx.compose.runtime.Composer,int)
@@ -31996,7 +31967,7 @@ androidx.compose.material3.TabRowDefaults:
     public static long getContentColor()
     public static androidx.compose.ui.Modifier tabIndicatorOffset()
 androidx.compose.material3.TabRowKt$ScrollableTabRow$1:
-    public static void invoke$27()
+    public static void invoke$28()
 androidx.compose.material3.TabRowKt$ScrollableTabRow$2$1$1$3
 androidx.compose.material3.TabRowKt$ScrollableTabRow$2$1$1:
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
@@ -32039,7 +32010,7 @@ androidx.compose.material3.TextFieldImplKt$CommonDecorationBox$3$containerWithId
 androidx.compose.material3.TextFieldImplKt$CommonDecorationBox$3$decoratedLabel$1$1:
     public final void invoke(androidx.compose.runtime.Composer,int)
 androidx.compose.material3.TextFieldImplKt$CommonDecorationBox$3$decoratedPlaceholder$1:
-    public static void invoke$28()
+    public static void invoke$29()
 androidx.compose.material3.TextFieldImplKt$CommonDecorationBox$3$decoratedSuffix$1
 androidx.compose.material3.TextFieldImplKt$CommonDecorationBox$3$decoratedSupporting$1$1:
     public final void invoke(androidx.compose.runtime.Composer,int)
@@ -32086,7 +32057,7 @@ androidx.compose.material3.TextFieldType:
 androidx.compose.material3.TextKt$LocalTextStyle$1
 androidx.compose.material3.TextKt$ProvideTextStyle$1
 androidx.compose.material3.TextKt$Text$1:
-    public final void invoke$20()
+    public final void invoke$21()
 androidx.compose.material3.TextKt$Text$2:
     public final void invoke(androidx.compose.runtime.Composer,int)
 androidx.compose.material3.Typography:
@@ -32116,7 +32087,9 @@ androidx.compose.material3.internal.ComposableSingletons$ExposedDropdownMenuPopu
     public static kotlin.jvm.functions.Function2 getLambda-1$material3_release()
 androidx.compose.material3.internal.ExposedDropdownMenuPopupKt$ExposedDropdownMenuPopup$1$invoke$$inlined$onDispose$1
 androidx.compose.material3.internal.ExposedDropdownMenuPopupKt$ExposedDropdownMenuPopup$1
-androidx.compose.material3.internal.ExposedDropdownMenuPopupKt$ExposedDropdownMenuPopup$3$invoke$$inlined$onDispose$1
+androidx.compose.material3.internal.ExposedDropdownMenuPopupKt$ExposedDropdownMenuPopup$3$invoke$$inlined$onDispose$1:
+    public final synthetic int $r8$classId
+    public synthetic void <init>(int)
 androidx.compose.material3.internal.ExposedDropdownMenuPopupKt$ExposedDropdownMenuPopup$3
 androidx.compose.material3.internal.ExposedDropdownMenuPopupKt$ExposedDropdownMenuPopup$5:
     public final void invoke(androidx.compose.ui.layout.LayoutCoordinates)
@@ -32228,6 +32201,26 @@ androidx.compose.material3.tokens.ColorLightTokens:
     public static long getTertiaryContainer-0d7_KjU()
 androidx.compose.material3.tokens.ColorSchemeKeyTokens$EnumUnboxingLocalUtility
 androidx.compose.material3.tokens.ColorSchemeKeyTokens
+androidx.compose.material3.tokens.DialogTokens:
+    public static final int ActionFocusLabelTextColor
+    public static final int ActionHoverLabelTextColor
+    public static final int ActionLabelTextColor
+    public static final int ActionLabelTextFont
+    public static final int ActionPressedLabelTextColor
+    public static final int ContainerColor
+    public static final int ContainerSurfaceTintLayerColor
+    public static final androidx.compose.material3.tokens.DialogTokens INSTANCE
+    public static final float IconSize
+    public static int getActionLabelTextColor()
+    public static int getActionLabelTextFont()
+    public static int getContainerColor()
+    public static float getContainerElevation-D9Ej5fM()
+    public static int getContainerShape()
+    public static int getHeadlineColor()
+    public static int getHeadlineFont()
+    public static int getIconColor()
+    public static int getSupportingTextColor()
+    public static int getSupportingTextFont()
 androidx.compose.material3.tokens.DividerTokens:
     public static final int Color
     public static final androidx.compose.material3.tokens.DividerTokens INSTANCE
@@ -32504,76 +32497,7 @@ androidx.compose.material3.tokens.ShapeTokens:
     public static androidx.compose.foundation.shape.RoundedCornerShape getCornerLarge()
     public static androidx.compose.foundation.shape.RoundedCornerShape getCornerMedium()
     public static androidx.compose.foundation.shape.RoundedCornerShape getCornerSmall()
-androidx.compose.material3.tokens.SwitchTokens:
-    public static final int DisabledSelectedHandleColor
-    public static final int DisabledSelectedIconColor
-    public static final int DisabledSelectedTrackColor
-    public static final int DisabledUnselectedHandleColor
-    public static final int DisabledUnselectedIconColor
-    public static final int DisabledUnselectedTrackColor
-    public static final int DisabledUnselectedTrackOutlineColor
-    public static final int HandleShape
-    public static final androidx.compose.material3.tokens.SwitchTokens INSTANCE
-    public static final float IconHandleHeight
-    public static final float IconHandleWidth
-    public static final float PressedHandleHeight
-    public static final int SelectedFocusHandleColor
-    public static final int SelectedFocusIconColor
-    public static final int SelectedFocusTrackColor
-    public static final int SelectedHandleColor
-    public static final float SelectedHandleHeight
-    public static final int SelectedHoverHandleColor
-    public static final int SelectedHoverIconColor
-    public static final int SelectedHoverTrackColor
-    public static final int SelectedIconColor
-    public static final float SelectedIconSize
-    public static final int SelectedPressedHandleColor
-    public static final int SelectedPressedIconColor
-    public static final int SelectedPressedTrackColor
-    public static final int SelectedTrackColor
-    public static final int StateLayerShape
-    public static final int TrackShape
-    public static final int UnselectedFocusHandleColor
-    public static final int UnselectedFocusIconColor
-    public static final int UnselectedFocusTrackColor
-    public static final int UnselectedFocusTrackOutlineColor
-    public static final int UnselectedHandleColor
-    public static final float UnselectedHandleHeight
-    public static final int UnselectedHoverHandleColor
-    public static final int UnselectedHoverIconColor
-    public static final int UnselectedHoverTrackColor
-    public static final int UnselectedHoverTrackOutlineColor
-    public static final int UnselectedIconColor
-    public static final float UnselectedIconSize
-    public static final int UnselectedPressedHandleColor
-    public static final int UnselectedPressedIconColor
-    public static final int UnselectedPressedTrackColor
-    public static final int UnselectedPressedTrackOutlineColor
-    public static final int UnselectedTrackColor
-    public static final int UnselectedTrackOutlineColor
-    public static int getDisabledSelectedHandleColor()
-    public static int getDisabledSelectedIconColor()
-    public static int getDisabledSelectedTrackColor()
-    public static int getDisabledUnselectedHandleColor()
-    public static int getDisabledUnselectedIconColor()
-    public static int getDisabledUnselectedTrackColor()
-    public static int getDisabledUnselectedTrackOutlineColor()
-    public static int getHandleShape()
-    public static float getPressedHandleWidth-D9Ej5fM()
-    public static int getSelectedHandleColor()
-    public static float getSelectedHandleWidth-D9Ej5fM()
-    public static int getSelectedIconColor()
-    public static int getSelectedTrackColor()
-    public static float getStateLayerSize-D9Ej5fM()
-    public static float getTrackHeight-D9Ej5fM()
-    public static float getTrackOutlineWidth-D9Ej5fM()
-    public static int getTrackShape()
-    public static float getTrackWidth-D9Ej5fM()
-    public static int getUnselectedFocusTrackOutlineColor()
-    public static int getUnselectedHandleColor()
-    public static float getUnselectedHandleWidth-D9Ej5fM()
-    public static int getUnselectedIconColor()
-    public static int getUnselectedTrackColor()
+androidx.compose.material3.tokens.TextButtonTokens
 androidx.compose.material3.tokens.TypeScaleTokens:
     public static final androidx.compose.material3.tokens.TypeScaleTokens INSTANCE
     public static androidx.compose.ui.text.font.GenericFontFamily getBodyLargeFont()
@@ -32822,15 +32746,12 @@ androidx.compose.runtime.ComposerImpl:
     public static void ensureWriter()
     public static void exitGroup()
     public static void finalizeCompose()
-    public final androidx.compose.runtime.Applier getApplier()
     public final kotlin.coroutines.CoroutineContext getApplyCoroutineContext()
     public static boolean getAreChildrenComposing$runtime_release()
     public static androidx.compose.runtime.ControlledComposition getComposition()
     public final androidx.compose.runtime.tooling.CompositionData getCompositionData()
     public final int getCompoundKeyHash()
-    public final androidx.compose.runtime.PersistentCompositionLocalMap getCurrentCompositionLocalMap()
     public static androidx.compose.runtime.changelist.ChangeList getDeferredChanges$runtime_release()
-    public final boolean getInserting()
     public static java.lang.Object getNode()
     public static androidx.compose.runtime.SlotReader getReader$runtime_release()
     public final androidx.compose.runtime.RecomposeScope getRecomposeScope()
@@ -33376,7 +33297,6 @@ androidx.compose.runtime.ScopeUpdateScope
 androidx.compose.runtime.SdkStubsFallbackFrameClock$withFrameNanos$2
 androidx.compose.runtime.SdkStubsFallbackFrameClock
 androidx.compose.runtime.SkippableUpdater:
-    public static final synthetic androidx.compose.runtime.SkippableUpdater box-impl(androidx.compose.runtime.Composer)
     public static synthetic androidx.compose.runtime.Composer unbox-impl()
 androidx.compose.runtime.SlotReader:
     public static final int $stable
@@ -34178,7 +34098,7 @@ androidx.compose.runtime.snapshots.SnapshotIdSet:
     public static int lowest()
 androidx.compose.runtime.snapshots.SnapshotIdSetKt
 androidx.compose.runtime.snapshots.SnapshotKt$advanceGlobalSnapshot$3:
-    public static void invoke$29()
+    public static void invoke$30()
 androidx.compose.runtime.snapshots.SnapshotKt$emptyLambda$1
 androidx.compose.runtime.snapshots.SnapshotKt$mergedReadObserver$1
 androidx.compose.runtime.snapshots.SnapshotKt$mergedWriteObserver$1
@@ -34332,13 +34252,13 @@ androidx.compose.ui.Alignment$Companion:
     public static final androidx.compose.ui.Alignment BottomCenter
     public static final androidx.compose.ui.Alignment BottomEnd
     public static final androidx.compose.ui.Alignment CenterEnd
-    public static final androidx.compose.ui.Alignment$Horizontal End
     public static final androidx.compose.ui.Alignment TopEnd
     public static androidx.compose.ui.Alignment getBottomStart()
     public static androidx.compose.ui.Alignment getCenter()
     public static androidx.compose.ui.Alignment$Horizontal getCenterHorizontally()
     public static androidx.compose.ui.Alignment getCenterStart()
     public static androidx.compose.ui.Alignment$Vertical getCenterVertically()
+    public static androidx.compose.ui.Alignment$Horizontal getEnd()
     public static androidx.compose.ui.Alignment$Horizontal getStart()
     public static androidx.compose.ui.Alignment$Vertical getTop()
     public static androidx.compose.ui.Alignment getTopCenter()
@@ -35535,10 +35455,10 @@ androidx.compose.ui.graphics.vector.GroupComponent$wrappedListener$1:
     public static java.lang.CharSequence invoke$2()
     public final java.lang.CharSequence invoke$3()
     public static java.lang.String invoke$3()
-    public final void invoke$30()
-    public static void invoke$31()
+    public final void invoke$31()
     public static void invoke$32()
     public static void invoke$33()
+    public static void invoke$34()
     public final java.lang.Boolean invoke$8()
     public static java.lang.Boolean invoke$9()
 androidx.compose.ui.graphics.vector.GroupComponent:
@@ -35710,7 +35630,7 @@ androidx.compose.ui.graphics.vector.VNode:
     static void <clinit>()
 androidx.compose.ui.graphics.vector.VectorComponent$1:
     public final void invoke(androidx.compose.ui.graphics.drawscope.DrawScope)
-    public final void invoke$30()
+    public final void invoke$31()
 androidx.compose.ui.graphics.vector.VectorComponent$drawVectorBlock$1
 androidx.compose.ui.graphics.vector.VectorComponent$invalidateCallback$1
 androidx.compose.ui.graphics.vector.VectorComponent:
@@ -36434,7 +36354,7 @@ androidx.compose.ui.input.pointer.PointerInteropFilter:
     public static void setRequestDisallowInterceptTouchEvent()
 androidx.compose.ui.input.pointer.PointerInteropFilter_androidKt$pointerInteropFilter$3:
     public static java.lang.Boolean invoke$10()
-    public final void invoke$34()
+    public final void invoke$35()
 androidx.compose.ui.input.pointer.PointerInteropFilter_androidKt
 androidx.compose.ui.input.pointer.PointerInteropUtils_androidKt
 androidx.compose.ui.input.pointer.PointerKeyboardModifiers:
@@ -36462,7 +36382,7 @@ androidx.compose.ui.input.pointer.ProcessResult
 androidx.compose.ui.input.pointer.RequestDisallowInterceptTouchEvent:
     public static final int $stable
     static void <clinit>()
-    public final void invoke(boolean)
+    public final void invoke$19()
     public static void setPointerInteropFilter$ui_release()
 androidx.compose.ui.input.pointer.SuspendPointerInputElement:
     static void <clinit>()
@@ -36779,7 +36699,7 @@ androidx.compose.ui.layout.SubcomposeLayoutKt$ReusedSlotId$1:
     public static void getRadioButton-o7Vup1c()
     public static androidx.compose.ui.node.NodeCoordinator$HitTestSource getSemanticsSource()
     public static boolean getShouldUseDispatchDraw()
-    public static void getSwitch-o7Vup1c()
+    public static int getSwitch-o7Vup1c()
     public static int getTab-o7Vup1c()
     public static int getTextBottom-J6kI3mc()
     public static int getTextCenter-J6kI3mc()
@@ -36796,9 +36716,9 @@ androidx.compose.ui.layout.SubcomposeLayoutKt$SubcomposeLayout$5
 androidx.compose.ui.layout.SubcomposeLayoutKt:
     public static final synthetic androidx.compose.ui.layout.SubcomposeLayoutKt$ReusedSlotId$1 access$getReusedSlotId$p()
 androidx.compose.ui.layout.SubcomposeLayoutState$setCompositionContext$1:
-    public static void invoke$35()
     public static void invoke$36()
     public static void invoke$37()
+    public static void invoke$38()
 androidx.compose.ui.layout.SubcomposeLayoutState$setMeasurePolicy$1
 androidx.compose.ui.layout.SubcomposeLayoutState$setRoot$1
 androidx.compose.ui.layout.SubcomposeLayoutState:
@@ -36885,7 +36805,7 @@ androidx.compose.ui.node.BackwardsCompatNodeKt$onDrawCacheReadsChanged$1:
     public static final androidx.compose.ui.node.BackwardsCompatNodeKt$onDrawCacheReadsChanged$1 INSTANCE
     public final java.lang.Boolean invoke(java.lang.Object)
     public final void invoke(androidx.compose.ui.node.BackwardsCompatNode)
-    public static void invoke$38()
+    public static void invoke$39()
 androidx.compose.ui.node.BackwardsCompatNodeKt$updateModifierLocalConsumer$1
 androidx.compose.ui.node.BackwardsCompatNodeKt:
     public static final androidx.compose.ui.node.BackwardsCompatNodeKt$DetachedModifierLocalReadScope$1 DetachedModifierLocalReadScope
@@ -36899,13 +36819,13 @@ androidx.compose.ui.node.CanFocusChecker:
     public static void reset()
 androidx.compose.ui.node.CenteredArray
 androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1:
-    public static void invoke$39()
     public static void invoke$40()
     public static void invoke$41()
     public static void invoke$42()
     public static void invoke$43()
     public static void invoke$44()
     public static void invoke$45()
+    public static void invoke$46()
 androidx.compose.ui.node.ComposeUiNode$Companion$SetDensity$1
 androidx.compose.ui.node.ComposeUiNode$Companion$SetLayoutDirection$1
 androidx.compose.ui.node.ComposeUiNode$Companion$SetMeasurePolicy$1
@@ -36918,13 +36838,9 @@ androidx.compose.ui.node.ComposeUiNode$Companion$VirtualConstructor$1:
     public final java.util.Map invoke$2()
 androidx.compose.ui.node.ComposeUiNode$Companion:
     public static final kotlin.jvm.functions.Function0 VirtualConstructor
-    public static androidx.compose.ui.node.ComposeUiNode$Companion$VirtualConstructor$1 getConstructor()
-    public static androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1 getSetCompositeKeyHash()
     public static androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1 getSetDensity()
     public static androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1 getSetLayoutDirection()
-    public static androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1 getSetMeasurePolicy()
     public static kotlin.jvm.functions.Function2 getSetModifier()
-    public static androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1 getSetResolvedCompositionLocals()
     public static androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1 getSetViewConfiguration()
 androidx.compose.ui.node.ComposeUiNode:
     public abstract void setCompositeKeyHash()
@@ -37606,7 +37522,7 @@ androidx.compose.ui.platform.AndroidComposeView$addAndroidView$1$onInitializeAcc
     public static androidx.compose.ui.text.input.PlatformTextInputService invoke()
     public final java.lang.Boolean invoke(java.lang.Object)
     public static java.lang.Boolean invoke$11()
-    public final void invoke$21()
+    public final void invoke$22()
     public final void invoke$6()
 androidx.compose.ui.platform.AndroidComposeView$configurationChangeObserver$1
 androidx.compose.ui.platform.AndroidComposeView$dragAndDropModifierOnDragListener$1$$InternalSyntheticThrowCCEIfNotNull$17$e1674ab5d5cfc48cae10ec0c3fa51760263bb2d4fff2db7ca3c3645f45f39480$0
@@ -37695,7 +37611,7 @@ androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$Trans
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$WhenMappings
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$onSendAccessibilityEvent$1:
     public static java.lang.Boolean invoke$12()
-    public static void invoke$46()
+    public static void invoke$47()
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$scheduleScrollEventIfNeeded$1
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$scheduleScrollEventIfNeededLambda$1
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$semanticComparator$$inlined$thenBy$1:
@@ -37706,8 +37622,8 @@ androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$sendS
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$sendSubtreeChangeAccessibilityEvents$semanticsNode$1
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat$sortByGeometryGroupings$2:
     public final void invoke(androidx.compose.runtime.Composer,int)
-    public static void invoke$47()
     public static void invoke$48()
+    public static void invoke$49()
     public static java.lang.Integer invoke$7()
 androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat:
     public static final int $stable
@@ -38272,7 +38188,7 @@ androidx.compose.ui.semantics.Role:
     public static final synthetic int access$getRadioButton$cp()
     public static final synthetic int access$getSwitch$cp()
     public static final synthetic int access$getTab$cp()
-    public static final synthetic androidx.compose.ui.semantics.Role box-impl(int)
+    public static final synthetic androidx.compose.ui.semantics.Role box-impl()
     public static synthetic int unbox-impl()
 androidx.compose.ui.semantics.ScrollAxisRange:
     static void <clinit>()
@@ -38357,7 +38273,7 @@ androidx.compose.ui.semantics.SemanticsProperties$ContentDescription$1:
     public final java.util.List invoke(java.util.List,java.util.List)
     public final void invoke$1(java.lang.String)
     public static java.lang.Boolean invoke$13()
-    public static java.lang.Float invoke$3()
+    public static java.lang.Float invoke$2()
     public static androidx.compose.ui.semantics.Role invoke-qtA-w6s()
 androidx.compose.ui.semantics.SemanticsProperties$InvisibleToUser$1
 androidx.compose.ui.semantics.SemanticsProperties$IsDialog$1
@@ -38447,6 +38363,7 @@ androidx.compose.ui.text.AndroidParagraph$wordBoundary$2:
     public static androidx.sqlite.db.SupportSQLiteStatement invoke()
     public static androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper invoke()
     public final java.io.File invoke()
+    public final void invoke()
     public static androidx.navigation.NavHostController invoke$1()
     public final java.lang.Boolean invoke$3()
 androidx.compose.ui.text.AndroidParagraph:
@@ -40112,15 +40029,15 @@ androidx.compose.ui.viewinterop.AndroidViewHolder$Companion$OnCommitAffectingUpd
 androidx.compose.ui.viewinterop.AndroidViewHolder$Companion$OnCommitAffectingUpdate$1:
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
     public final void invoke(androidx.compose.ui.semantics.SemanticsPropertyReceiver)
-    public static void invoke$49()
     public static void invoke$50()
+    public static void invoke$51()
 androidx.compose.ui.viewinterop.AndroidViewHolder$Companion
 androidx.compose.ui.viewinterop.AndroidViewHolder$layoutNode$1$1
 androidx.compose.ui.viewinterop.AndroidViewHolder$layoutNode$1$2
 androidx.compose.ui.viewinterop.AndroidViewHolder$layoutNode$1$3:
     public final void invoke(androidx.compose.ui.layout.LayoutCoordinates)
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
-    public final void invoke$34()
+    public final void invoke$35()
 androidx.compose.ui.viewinterop.AndroidViewHolder$layoutNode$1$4
 androidx.compose.ui.viewinterop.AndroidViewHolder$layoutNode$1$5$measure$1
 androidx.compose.ui.viewinterop.AndroidViewHolder$layoutNode$1$5$measure$2
@@ -40159,11 +40076,11 @@ androidx.compose.ui.viewinterop.AndroidView_androidKt$AndroidView$$inlined$Compo
 androidx.compose.ui.viewinterop.AndroidView_androidKt$AndroidView$$inlined$ReusableComposeNode$1
 androidx.compose.ui.viewinterop.AndroidView_androidKt$AndroidView$1
 androidx.compose.ui.viewinterop.AndroidView_androidKt$AndroidView$2$1:
-    public static void invoke$51()
     public static void invoke$52()
     public static void invoke$53()
     public static void invoke$54()
     public static void invoke$55()
+    public static void invoke$56()
 androidx.compose.ui.viewinterop.AndroidView_androidKt$AndroidView$2$2
 androidx.compose.ui.viewinterop.AndroidView_androidKt$AndroidView$2$3
 androidx.compose.ui.viewinterop.AndroidView_androidKt$AndroidView$3$1
@@ -40197,14 +40114,14 @@ androidx.compose.ui.viewinterop.ViewFactoryHolder:
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$1$invoke$$inlined$onDispose$1
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$1:
     public final androidx.compose.runtime.DisposableEffectResult invoke(androidx.compose.runtime.DisposableEffectScope)
-    public static void invoke$56()
+    public static void invoke$57()
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$2
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$3
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$dialog$1$1$1$1:
     public final void invoke(androidx.compose.ui.layout.Placeable$PlacementScope)
     public final void invoke(androidx.compose.ui.semantics.SemanticsPropertyReceiver)
     public final void invoke$12()
-    public static void invoke$57()
+    public static void invoke$58()
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$dialog$1$1$1$2
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$dialog$1$1$1
 androidx.compose.ui.window.AndroidDialog_androidKt$Dialog$dialogId$1:
@@ -40970,12 +40887,14 @@ androidx.datastore.core.SingleProcessDataStore$Message$Update:
     public static kotlin.jvm.functions.Function2 getTransform()
 androidx.datastore.core.SingleProcessDataStore$actor$1
 androidx.datastore.core.SingleProcessDataStore$actor$2:
-    public static void invoke$58()
+    public static void invoke$59()
 androidx.datastore.core.SingleProcessDataStore$actor$3:
     public static java.lang.Object invoke$34()
 androidx.datastore.core.SingleProcessDataStore$data$1$1:
     public int label
     public static java.lang.Object invoke$35()
+androidx.datastore.core.SingleProcessDataStore$data$1$invokeSuspend$$inlined$map$1:
+    public final synthetic int $r8$classId
 androidx.datastore.core.SingleProcessDataStore$data$1:
     public final java.lang.Object invoke$12()
 androidx.datastore.core.SingleProcessDataStore$file$2
@@ -41046,7 +40965,7 @@ androidx.datastore.preferences.core.MutablePreferences:
     public final java.lang.Object get(androidx.datastore.preferences.core.Preferences$Key)
     public static varargs void putAll()
     public static java.lang.Object remove()
-    public final void set(androidx.datastore.preferences.core.Preferences$Key,java.lang.Object)
+    public final void set(androidx.datastore.preferences.core.Preferences$Key,java.lang.Integer)
 androidx.datastore.preferences.core.PreferenceDataStore$updateData$2:
     public final java.lang.Object invoke$36()
 androidx.datastore.preferences.core.PreferenceDataStoreFactory$create$delegate$1
@@ -41063,9 +40982,8 @@ androidx.datastore.preferences.core.Preferences:
     public abstract androidx.datastore.preferences.core.Preferences toPreferences()
 androidx.datastore.preferences.core.PreferencesFactory:
     public static final int SettingsScreen$lambda$1(androidx.compose.runtime.MutableState)
-    public static final boolean SettingsScreen$lambda$2(androidx.compose.runtime.MutableState)
+    public static final void access$HistoryScreen$lambda$3(androidx.compose.runtime.MutableState,boolean)
     public static final androidx.lifecycle.viewmodel.CreationExtras defaultCreationExtras(androidx.lifecycle.ViewModelStoreOwner)
-    public static final java.lang.Object edit(androidx.datastore.preferences.core.PreferenceDataStore,kotlin.jvm.functions.Function2,kotlin.coroutines.Continuation)
     public static java.util.List emptyList()
     public static java.util.Set emptySet()
     public abstract java.lang.Object get()
@@ -41992,7 +41910,30 @@ androidx.lifecycle.ViewModel:
 androidx.lifecycle.ViewModelKt$$InternalSyntheticThrowCCEIfNotNull$15$843a1087b843a644e493119d0905e17ccea1f3771e8b999d8bd4e315b3fe2988$0
 androidx.lifecycle.ViewModelKt$$InternalSyntheticThrowCCEIfNotNull$42$9dfa5982117af748cdc99afdff07f6a29cfebd4248f53eabc53c4f6b122ce7a1$0
 androidx.lifecycle.ViewModelKt:
+    public static final java.lang.String GeneratorScreen$lambda$10(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$13(androidx.compose.runtime.MutableState)
     public static final boolean GeneratorScreen$lambda$19(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$22(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$25(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$28(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$31(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$34(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$37(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$4(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$40(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$43(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$46(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$49(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$52(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$55(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$58(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$61(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$64(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$67(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$7(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$70(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$73(androidx.compose.runtime.MutableState)
+    public static final java.lang.String GeneratorScreen$lambda$76(androidx.compose.runtime.MutableState)
     public static final boolean ScannerScreen$lambda$1(androidx.compose.runtime.MutableState)
     public static final boolean ScannerScreen$lambda$11(androidx.compose.runtime.MutableState)
     public static final void access$GeneratorScreen$lambda$20(androidx.compose.runtime.MutableState,boolean)
@@ -42085,8 +42026,8 @@ androidx.navigation.ActivityNavigator$Destination:
 androidx.navigation.ActivityNavigator$Extras
 androidx.navigation.ActivityNavigator$hostActivity$1:
     public final void invoke(androidx.navigation.NavOptionsBuilder)
-    public static void invoke$59()
-    public final void invoke$60()
+    public static void invoke$60()
+    public final void invoke$61()
 androidx.navigation.ActivityNavigator:
     public static final androidx.lifecycle.ViewModelProvider$NewInstanceFactory$Companion Companion
     public final android.content.Context context
@@ -42164,9 +42105,8 @@ androidx.navigation.NavController$handleDeepLink$2$2
 androidx.navigation.NavController$handleDeepLink$2:
     public final void invoke(androidx.navigation.NavOptionsBuilder)
     public final void invoke(java.lang.Throwable)
-    public final void invoke(boolean)
     public final java.lang.Object invoke$6()
-    public static void invoke$61()
+    public static void invoke$62()
 androidx.navigation.NavController$navInflater$2
 androidx.navigation.NavController$navigate$5
 androidx.navigation.NavController$onBackPressedCallback$1
@@ -42415,7 +42355,7 @@ androidx.navigation.compose.ComposableSingletons$ComposeNavigatorKt:
     public static final androidx.navigation.compose.ComposableSingletons$ComposeNavigatorKt INSTANCE
     public static kotlin.jvm.functions.Function4 getLambda-1$navigation_compose_release()
 androidx.navigation.compose.ComposableSingletons$DialogNavigatorKt$lambda-1$1:
-    public static void invoke$62()
+    public static void invoke$63()
 androidx.navigation.compose.ComposableSingletons$DialogNavigatorKt:
     public static final androidx.navigation.compose.ComposableSingletons$DialogNavigatorKt INSTANCE
     public static kotlin.jvm.functions.Function3 getLambda-1$navigation_compose_release()
@@ -42493,7 +42433,7 @@ androidx.navigation.compose.NavHostKt$NavHost$13:
 androidx.navigation.compose.NavHostKt$NavHost$14$1
 androidx.navigation.compose.NavHostKt$NavHost$14:
     public final void invoke(androidx.compose.animation.AnimatedContentScopeImpl,androidx.navigation.NavBackStackEntry,androidx.compose.runtime.Composer)
-    public static void invoke$63()
+    public static void invoke$64()
 androidx.navigation.compose.NavHostKt$NavHost$15:
     public int label
     public final java.lang.Object invoke$3()
@@ -42893,7 +42833,6 @@ androidx.savedstate.SavedStateRegistryController$Companion:
     public static android.graphics.Bitmap createBitmap()
     public static com.google.zxing.common.BitMatrix encode()
     public static void encodeMaximal()
-    public static androidx.datastore.preferences.core.Preferences$Key getAUTO_SCAN()
     public static com.modernqr.app.data.AppDatabase getDatabase()
     public static kotlin.collections.builders.MapBuilder getEmpty$kotlin_stdlib()
     private static int getEncodingMode$com$google$zxing$datamatrix$encoder$ASCIIEncoder()
@@ -43997,8 +43936,8 @@ com.modernqr.app.MainActivity:
     static void <clinit>()
 com.modernqr.app.MainActivityKt$BottomNavigationBar$1$1$1$1$1:
     public static final com.modernqr.app.MainActivityKt$BottomNavigationBar$1$1$1$1$1 INSTANCE
-    public final void invoke$60()
-    public static void invoke$64()
+    public final void invoke$61()
+    public static void invoke$65()
 com.modernqr.app.MainActivityKt$BottomNavigationBar$1$1$1$1
 com.modernqr.app.MainActivityKt$BottomNavigationBar$1$1$1
 com.modernqr.app.MainActivityKt$BottomNavigationBar$1$1$2
@@ -44052,12 +43991,9 @@ com.modernqr.app.data.HistoryItem:
     public static java.lang.String getType()
     public static boolean isPinned()
 com.modernqr.app.data.SettingsManager$Companion
-com.modernqr.app.data.SettingsManager$setAutoScan$2:
-    public int label
-    public final java.lang.Object invoke$38()
 com.modernqr.app.data.SettingsManager$setThemeMode$2:
     public int label
-    public final java.lang.Object invoke$38()
+    public static java.lang.Object invoke$38()
 com.modernqr.app.data.SettingsManager$special$$inlined$map$1$2
 com.modernqr.app.data.SettingsManager$special$$inlined$map$1
 com.modernqr.app.data.SettingsManager$special$$inlined$map$2$2
@@ -44065,12 +44001,26 @@ com.modernqr.app.data.SettingsManager$special$$inlined$map$2
 com.modernqr.app.data.SettingsManager:
     public static final int $stable
     public static final androidx.savedstate.SavedStateRegistryController$Companion Companion
-    public final androidx.datastore.core.SingleProcessDataStore$data$1$invokeSuspend$$inlined$map$1 getAutoScanFlow()
+    public final kotlinx.coroutines.flow.Flow autoScanFlow
     public final androidx.datastore.core.SingleProcessDataStore$data$1$invokeSuspend$$inlined$map$1 getThemeModeFlow()
-    public static java.lang.Object setAutoScan()
     public static java.lang.Object setThemeMode()
 com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-10$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-11$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-12$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-13$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-14$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-15$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-16$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-17$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-18$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-19$1
 com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-2$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-20$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-21$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-22$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-23$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-24$1
+com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-26$1
 com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-3$1
 com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-4$1
 com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt$lambda-5$1
@@ -44082,8 +44032,23 @@ com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt:
     public static final com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt INSTANCE
     public static kotlin.jvm.functions.Function2 getLambda-1$app_release()
     public static kotlin.jvm.functions.Function2 getLambda-10$app_release()
-    public static kotlin.jvm.functions.Function3 getLambda-11$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-11$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-12$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-13$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-14$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-15$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-16$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-17$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-18$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-19$app_release()
     public static kotlin.jvm.functions.Function2 getLambda-2$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-20$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-21$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-22$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-23$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-24$app_release()
+    public static kotlin.jvm.functions.Function3 getLambda-25$app_release()
+    public static kotlin.jvm.functions.Function3 getLambda-26$app_release()
     public static kotlin.jvm.functions.Function2 getLambda-3$app_release()
     public static kotlin.jvm.functions.Function2 getLambda-4$app_release()
     public static kotlin.jvm.functions.Function2 getLambda-5$app_release()
@@ -44093,10 +44058,18 @@ com.modernqr.app.ui.screens.ComposableSingletons$GeneratorScreenKt:
     public static kotlin.jvm.functions.Function2 getLambda-9$app_release()
 com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt$lambda-1$1
 com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt$lambda-2$1
+com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt$lambda-3$1
+com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt$lambda-4$1
+com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt$lambda-5$1
+com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt$lambda-6$1
 com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt:
     public static final com.modernqr.app.ui.screens.ComposableSingletons$HistoryScreenKt INSTANCE
     public static kotlin.jvm.functions.Function2 getLambda-1$app_release()
     public static kotlin.jvm.functions.Function2 getLambda-2$app_release()
+    public static kotlin.jvm.functions.Function3 getLambda-3$app_release()
+    public static kotlin.jvm.functions.Function3 getLambda-4$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-5$app_release()
+    public static kotlin.jvm.functions.Function2 getLambda-6$app_release()
 com.modernqr.app.ui.screens.ComposableSingletons$ScannerScreenKt$lambda-1$1
 com.modernqr.app.ui.screens.ComposableSingletons$ScannerScreenKt$lambda-2$1
 com.modernqr.app.ui.screens.ComposableSingletons$ScannerScreenKt$lambda-3$1
@@ -44116,11 +44089,26 @@ com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$1$1$1$1:
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$10$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$11$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$12$1
-com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$13:
-    public final void invoke()
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$13$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$14$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$15$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$16$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$17$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$18$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$19$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$2$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$20$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$21$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$22$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$23$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$24$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$25$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$26$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$27:
+    public final void invoke()
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$28$1
+com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$28$2
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$3$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$4$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$5$1
@@ -44136,12 +44124,12 @@ com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$7$4$1$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$7$4$1$2$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$7$4:
     public final void invoke(androidx.compose.foundation.layout.ColumnScope,androidx.compose.runtime.Composer,int)
-    public static void invoke$65()
+    public static void invoke$66()
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$7
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$8$1
 com.modernqr.app.ui.screens.GeneratorScreenKt$GeneratorScreen$1$9$1
 com.modernqr.app.ui.screens.GeneratorScreenKt
-com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$1$1$1
+com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$1$1$1$1
 com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$1
 com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$3$1
 com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$3$2$1$1$1$2$2
@@ -44153,7 +44141,12 @@ com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$3$invoke$$inlined$it
 com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$3$invoke$$inlined$items$default$3
 com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$3$invoke$$inlined$items$default$4
 com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$1$3
-com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$2
+com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$2$1
+com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$3$1
+com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$3
+com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$4$1$1
+com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$4
+com.modernqr.app.ui.screens.HistoryScreenKt$HistoryScreen$5
 com.modernqr.app.ui.screens.HistoryScreenKt
 com.modernqr.app.ui.screens.ScannerScreenKt$ScannerActionButton$1$1
 com.modernqr.app.ui.screens.ScannerScreenKt$ScannerActionButton$3
@@ -44177,17 +44170,16 @@ com.modernqr.app.ui.screens.ScannerScreenKt$ScannerScreen$3$1$invoke$$inlined$on
 com.modernqr.app.ui.screens.ScannerScreenKt$ScannerScreen$3$1
 com.modernqr.app.ui.screens.ScannerScreenKt$ScannerScreen$5
 com.modernqr.app.ui.screens.ScannerScreenKt$ScannerScreen$galleryLauncher$1
-com.modernqr.app.ui.screens.ScannerScreenKt$ScannerScreen$launcher$1$1
+com.modernqr.app.ui.screens.ScannerScreenKt$ScannerScreen$launcher$1$1:
+    public final androidx.compose.runtime.DisposableEffectResult invoke(androidx.compose.runtime.DisposableEffectScope)
+    public final void invoke$19()
 com.modernqr.app.ui.screens.ScannerScreenKt
-com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$1$1:
+com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$1$1$1$1:
     public final java.lang.Object invoke$3()
-com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$1
-com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$3$1$1$1:
-    public final java.lang.Object invoke$3()
-com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$3$1$1
-com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$4$2$1
-com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$4$3$1
-com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$4$4
+com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$1$1$1
+com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$2$2$1
+com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$2$3$1
+com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$1$2$4
 com.modernqr.app.ui.screens.SettingsScreenKt$SettingsScreen$2
 com.modernqr.app.ui.screens.SettingsScreenKt
 com.modernqr.app.viewmodel.MainViewModel$addHistoryItem$1:
@@ -45476,7 +45468,7 @@ kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCC
 kotlinx.coroutines.internal.ThreadContextKt$countAll$1:
     public static kotlinx.coroutines.internal.ThreadState invoke()
     public static java.lang.Object invoke$45()
-    public static void invoke$66()
+    public static void invoke$67()
 kotlinx.coroutines.internal.ThreadContextKt$findOne$1
 kotlinx.coroutines.internal.ThreadContextKt$updateState$1
 kotlinx.coroutines.internal.ThreadContextKt:

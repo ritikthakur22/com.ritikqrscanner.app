@@ -12,8 +12,8 @@ android {
         applicationId = "com.ritikqrscanner.app"
         minSdk = 24
         targetSdk = 36
-        versionCode = 5
-        versionName = "1.0.4"
+        versionCode = 6
+        versionName = "1.0.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -23,10 +23,15 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("release.keystore")
-            storePassword = "ritikqr2026#"
-            keyAlias = "upload"
-            keyPassword = "ritikqr2026#"
+            val keystorePropertiesFile = rootProject.file("keystore.properties")
+            if (keystorePropertiesFile.exists()) {
+                val keystoreProperties = java.util.Properties()
+                keystoreProperties.load(java.io.FileInputStream(keystorePropertiesFile))
+                storeFile = file(keystoreProperties["storeFile"] as String)
+                storePassword = keystoreProperties["storePassword"] as String
+                keyAlias = keystoreProperties["keyAlias"] as String
+                keyPassword = keystoreProperties["keyPassword"] as String
+            }
         }
     }
 

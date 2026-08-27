@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] /home/crdy/.gradle/caches/transforms-3/5981a8f92c8ac7be3e6c363f27157fac/transformed/navigation-common-2.7.7/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] /home/crdy/.gradle/caches/transforms-3/bede69e250bac1c62519f8caf92bad94/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] /home/crdy/.gradle/caches/transforms-3/c2dfff8cb415090c2e4547961c5fd8cf/transformed/navigation-common-ktx-2.7.7/AndroidManifest.xml:2:1-7:12
@@ -67,50 +67,56 @@ MERGED from [androidx.tracing:tracing:1.0.0] /home/crdy/.gradle/caches/transform
 MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/crdy/.gradle/caches/transforms-3/af51b36213c362e775d7406b10b4ce07/transformed/exifinterface-1.3.6/AndroidManifest.xml:17:1-24:12
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:17:1-56:12
 	package
-		INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:2:11-69
 uses-feature#android.hardware.camera
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:4:5-60
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:4:5-60
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:4:19-57
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:4:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:5:5-70
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:5:5-70
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:5:19-67
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:5:19-67
 uses-permission#android.permission.CAMERA
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:6:5-65
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:6:5-65
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:22:5-65
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:22:5-65
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:6:22-62
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:6:22-62
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:7:5-76
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:7:22-73
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:7:22-73
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:8:5-76
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:8:5-76
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:8:22-73
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:8:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:9:5-79
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:9:22-76
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:9:22-76
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:10:5-79
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:10:5-79
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:10:22-76
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:11:5-108
+	android:maxSdkVersion
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:11:79-105
+	android:name
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:11:22-78
 application
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:12:5-29:19
-INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:12:5-29:19
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:13:5-30:19
+INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:13:5-30:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/crdy/.gradle/caches/transforms-3/555bf2e80b2899dae17caa4222ddf1a8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
@@ -128,43 +134,43 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/crdy/.gradle/caches/t
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:46:5-54:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:46:5-54:19
 	android:extractNativeLibs
-		INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/crdy/.gradle/caches/transforms-3/c074c04e3ff3b7795e9ba549f8014395/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:15:9-57
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:16:9-57
 	android:roundIcon
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:16:9-54
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:18:9-49
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:19:9-49
 activity#com.modernqr.app.MainActivity
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:20:9-28:20
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:21:9-29:20
 	android:exported
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:22:13-36
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:23:13-36
 	android:theme
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:23:13-53
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:24:13-53
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:21:13-57
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:22:13-57
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:24:13-27:29
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:25:13-28:29
 action#android.intent.action.MAIN
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:25:17-69
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:25:25-66
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml:26:27-74
+		ADDED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml:27:27-74
 uses-sdk
-INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
-INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
+INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
+INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
 MERGED from [androidx.navigation:navigation-common:2.7.7] /home/crdy/.gradle/caches/transforms-3/5981a8f92c8ac7be3e6c363f27157fac/transformed/navigation-common-2.7.7/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-common:2.7.7] /home/crdy/.gradle/caches/transforms-3/5981a8f92c8ac7be3e6c363f27157fac/transformed/navigation-common-2.7.7/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] /home/crdy/.gradle/caches/transforms-3/bede69e250bac1c62519f8caf92bad94/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:20:5-44
@@ -290,9 +296,9 @@ MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/crdy/.gradle/cach
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /home/crdy/.gradle/caches/transforms-3/c46e10463258c039e441a46df0a7ed06/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/AndroidManifest.xml
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.3.0] /home/crdy/.gradle/caches/transforms-3/344dbe015ea3bf9554763d669cf8c982/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/crdy/.gradle/caches/transforms-3/555bf2e80b2899dae17caa4222ddf1a8/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20

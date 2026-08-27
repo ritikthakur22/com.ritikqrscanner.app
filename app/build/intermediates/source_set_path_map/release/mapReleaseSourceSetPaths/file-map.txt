@@ -49,9 +49,9 @@ com.ritikqrscanner.app-sqlite-framework-2.4.0-47 /home/crdy/.gradle/caches/trans
 com.ritikqrscanner.app-material-ripple-release-48 /home/crdy/.gradle/caches/transforms-3/f5f2416136e321f0baae1e68bcddb01f/transformed/material-ripple-release/res
 com.ritikqrscanner.app-ui-release-49 /home/crdy/.gradle/caches/transforms-3/f6439b4a8b53f99252a90f309225e362/transformed/ui-release/res
 com.ritikqrscanner.app-annotation-experimental-1.3.0-50 /home/crdy/.gradle/caches/transforms-3/f742ed142c00fa0a890ae0b11b2a7310/transformed/annotation-experimental-1.3.0/res
-com.ritikqrscanner.app-resValues-51 /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/build/generated/res/resValues/release
-com.ritikqrscanner.app-packageReleaseResources-52 /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
-com.ritikqrscanner.app-packageReleaseResources-53 /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
-com.ritikqrscanner.app-release-54 /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/build/intermediates/merged_res/release/mergeReleaseResources
-com.ritikqrscanner.app-main-55 /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/main/res
-com.ritikqrscanner.app-release-56 /home/crdy/testing/app/SecScanQR_workspace/ModernQRApp/app/src/release/res
+com.ritikqrscanner.app-resValues-51 /home/crdy/testing/app/com.ritikqrscanner.app/app/build/generated/res/resValues/release
+com.ritikqrscanner.app-packageReleaseResources-52 /home/crdy/testing/app/com.ritikqrscanner.app/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
+com.ritikqrscanner.app-packageReleaseResources-53 /home/crdy/testing/app/com.ritikqrscanner.app/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
+com.ritikqrscanner.app-release-54 /home/crdy/testing/app/com.ritikqrscanner.app/app/build/intermediates/merged_res/release/mergeReleaseResources
+com.ritikqrscanner.app-main-55 /home/crdy/testing/app/com.ritikqrscanner.app/app/src/main/res
+com.ritikqrscanner.app-release-56 /home/crdy/testing/app/com.ritikqrscanner.app/app/src/release/res
