@@ -48,8 +48,8 @@ Anyone can clone and build this application locally using Android Studio.
 ### Build Instructions
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/ritikthakur22/QRScannerReader.git
-   cd QRScannerReader
+   git clone https://github.com/ritikthakur22/com.ritikqrscanner.app.git
+   cd com.ritikqrscanner.app
    ```
 2. **Open the project**:
    Open Android Studio -> `File` -> `Open...` and select the project directory.
@@ -86,9 +86,10 @@ To provide its functionality, the app requires the following permissions:
 ## 👨‍💻 Developer Details
 - **Developer**: Ritik Thakur
 - **Contact**: [ritikthakur22in@gmail.com](mailto:ritikthakur22in@gmail.com)
-- **GitHub**: [ritikthakur22](https://github.com/ritikthakur22)
+- **GitHub**: [ritikthakur22/com.ritikqrscanner.app](https://github.com/ritikthakur22/com.ritikqrscanner.app)
 - **Website**: [www.ritikthakur.com.np](https://www.ritikthakur.com.np/)
-- **Privacy Policy**: [Read Here](https://docs.google.com/document/d/1lsuML4n8tc4_V2ltfkkAxb57SFENPnabYSzk9h829mc/edit?usp=sharing)
+- **Privacy Policy**: [Read Here](https://docs.google.com/document/d/1KkKbtngJ4Nq-I-uX4OAik2w3YD889olWSKZ1AYuTixE/edit?usp=sharing)
+- **Terms & Conditions**: [Read Here](https://docs.google.com/document/d/1lsuML4n8tc4_V2ltfkkAxb57SFENPnabYSzk9h829mc/edit?usp=sharing)
 
 ## 📄 License
-© 2026 Ritik Thakur. All rights reserved.
+This project is open-source and licensed under the [MIT License](LICENSE).
