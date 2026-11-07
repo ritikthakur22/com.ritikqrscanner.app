@@ -1,4 +1,4 @@
-# QR Scanner & Reader [No ADs]
+<p align="center"><img src="docs/banner.svg" width="100%" alt="QR Scanner & Reader — fast, offline QR and barcode scanner with no ads or trackers" /></p>
 
 A fast, modern, and completely ad-free QR Scanner and Barcode Reader built natively for Android using Jetpack Compose. Designed with a minimal UI and smooth user experience, it features dynamic light and dark modes, seamless Wi-Fi auto-connect, and comprehensive history management.
 
